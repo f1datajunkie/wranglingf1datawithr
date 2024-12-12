@@ -1,0 +1,204 @@
+---
+output:
+  html_document:
+    keep_md: yes
+---
+```{r setup, echo = F, message=F}
+require(knitr)
+options(knitr.table.format = 'markdown')
+opts_chunk$set(fig.path = "images/career-")
+opts_chunk$set(results = "asis")
+```
+# Points Maximisation Charts - notes
+
+```{r}
+source('ergastR-core.R')
+alonso=driverResults.df('2014','alonso')
+raikkonen=driverResults.df('2014','raikkonen')
+ricciardo=driverResults.df('2014','ricciardo')
+vettel=driverResults.df('2014','vettel')
+
+
+library(ggplot2)
+newpoints=data.frame(x=c(25,18,15,12,10,8,6,4,2,1,0),y=c(18,15,12,10,8,6,4,2,1,0,0))
+raceoff=merge(alonso[,c('points','position','positionText','round')],raikkonen[,c('points','position','positionText','round')],by='round')
+raceoff$topd2=(raceoff$position.x>raceoff$position.y)
+
+#Hack final round points
+raceoff[raceoff['round']==19,]$points.x=raceoff[raceoff['round']==19,]$points.x/2
+raceoff[raceoff['round']==19,]$points.y=raceoff[raceoff['round']==19,]$points.y/2
+raceoff=ddply(raceoff, .(round),transform,
+              d1pos=max(position.x,position.y),
+              d2pos=min(position.x,position.y),
+              d1points=max(points.x,points.y),
+              d2points=min(points.x,points.y))
+  
+library(plyr)
+raceoff.summary=ddply(raceoff,.(points.x,points.y),summarise,cnt=length(round))
+raceoff.team.summary=ddply(raceoff,.(d1points,d2points),summarise,cnt=length(round))
+
+pointsDualPerformanceChart=function(raceoff,raceoff.summary,title,d1,d2){
+  ggplot(raceoff.summary,aes(x=points.x,y=points.y))+stat_smooth(data=raceoff,aes(x=points.x,y=points.y),se=F,col='magenta')+geom_line(data=newpoints,aes(x=x,y=y),col='red',linetype='dotted')+geom_line(data=newpoints,aes(x=rev(y),y=rev(x)),col='blue',linetype='dotted')+stat_abline(col='grey')+geom_point(aes(size=cnt),col='pink')+geom_text(aes(label=cnt),size=2)+scale_size(range=c(2,6),name="Count")+xlab(d1)+ylab(d2)+ggtitle(title)+scale_y_continuous(breaks = newpoints$x,minor_breaks=NULL) +scale_x_continuous(breaks = newpoints$x,minor_breaks=NULL)+coord_fixed()+theme_bw()+guides(size=FALSE)
+  }
+
+pointsDualPerformanceChart(raceoff,raceoff.summary,"Points Awarded by Race, 2014",'ALO','RAI')
+```
+
+
+
+
+Fragments cut from pointsPerfromanceCharts.Rmd
+
+
+But if we group the results *by team*, and then try to fit models on that basis, might it be more illuminating? Might it help us identify different team strategies, or team tendencies, such as putting all the effort into one driver and letting the other languish, or trying to use close competitiveness between team mates to maximise points hauls and push each other, together, hopefully further up the classification?
+
+```{r message=FALSE,warning=FALSE}
+ggplot(results[results$team %in% c("red_bull","ferrari","mclaren","mercedes"),],aes(x=r1points,y=r2points,col=team))+geom_boxplot(aes(group=r1points))+stat_smooth(se=F,linetype='dashed')+stat_summary(fun.y = median, geom="line",linetype='dotted')+facet_wrap(~team)+geom_jitter(size=1,colour='black')
+```
+
+geom_line(data=data.frame(x=c(25,18,15,12,10,8,6,4,2,1,0),y=c(18,15,12,10,8,6,4,2,1,0,0)),aes(x=x,y=y),col='grey')+
+
+
+
+Extent to which same team member is team leader and second driver offers maximum support therein
+```{r warning=FALSE,message=FALSE}
+oldpoints=data.frame(x=c(10,8,6,5,4,3,2,1,0),y=c(8,6,5,4,3,2,1,0,0))
+newpoints=data.frame(x=c(25,18,15,12,10,8,6,4,2,1,0),y=c(18,15,12,10,8,6,4,2,1,0,0))
+#or better NEWPOINTS =c(25,18,15,12,10,8,6,4,2,1) OLDPOINTS=c(10,8,6,5,4,3,2,1)
+#then x=c(NEWPOINTS,0),y=c(NEWPOINTS[-1],0,0)
+
+results=dbGetQuery(ergastdb,'select r1.points as d1, r2.points as d2 from results r1 join results r2 join races r where r1.raceId=r2.raceId and r1.constructorId=r2.constructorId and r.raceId=r1.raceId and r1.driverId!=r2.driverId and r1.driverId in (select driverId from drivers where driverRef="alonso") and  year >=2010')
+ggplot(results,aes(x=d1,y=d2))+geom_point(data=newpoints,aes(x=x,y=y),size=1,colour='red')+geom_point(data=newpoints,aes(x=x,y=y),size=12,colour='lightpink',alpha=0.8)+geom_jitter()+stat_smooth()+geom_line(data=data.frame(x=c(25,18,15,12,10,8,6,4,2,1,0),y=c(18,15,12,10,8,6,4,2,1,0,0)),aes(x=x,y=y),col='red')
+```
+
+To what extent is a driver leading his team and being supported by his team mate?
+```{r warning=FALSE,message=FALSE}
+results=dbGetQuery(ergastdb,'select constructorRef, r1.points as d1, r2.points as d2 from results r1 join results r2 join races r join constructors c where r1.raceId=r2.raceId and r1.constructorId=r2.constructorId and c.constructorId=r1.constructorId and r.raceId=r1.raceId and r1.driverId!=r2.driverId and r2.driverId in (select driverId from drivers where driverRef="alonso")')
+
+results$topd2=(results$d2>results$d1)
+
+ggplot(results,aes(x=d1,y=d2,col=constructorRef))+stat_smooth(se=F)+geom_line(data=newpoints,aes(x=x,y=y),col='red')+geom_line(data=newpoints,aes(x=y,y=x),col='blue')+stat_abline(col='grey')+geom_line(data=oldpoints,aes(x=x,y=y),col='red',alpha=0.6)+geom_line(data=oldpoints,aes(x=y,y=x),col='blue',alpha=0.6)+geom_jitter(aes(shape=topd2))
+```
+
+
+
+
+
+
+# fff
+
+How about if we count those rather than jitter them - and also colour by constructor?
+```{r warning=FALSE,message=FALSE}
+results=dbGetQuery(ergastdb,
+                   'SELECT constructorRef, r1.points AS d1, r2.points AS d2 
+                   FROM results r1 JOIN results r2 JOIN races r JOIN constructors c 
+                   WHERE r1.raceId=r2.raceId 
+                   AND r1.constructorId=r2.constructorId 
+                   AND r.raceId=r1.raceId 
+                   AND r1.driverId!=r2.driverId 
+                   AND r2.driverId IN (SELECT driverId FROM drivers WHERE driverRef="alonso") 
+                   AND c.constructorId=r1.constructorId')
+
+#http://stackoverflow.com/a/11237563/454773
+ggplot(subset(results,d1>0 & d1>0),aes(x=d1,y=d2,col=constructorRef))+stat_sum(aes(size = ..n..))
+
+#Then augment - above the blue line is outperform, team winner; below the line is underfrom team loser. on the line is team max
+g=ggplot(results,aes(x=d1,y=d2,col=constructorRef))
+g=g+stat_sum(aes(size = ..n..))+stat_smooth(se=F)
+g=g+geom_line(data=newpoints,aes(x=x,y=y),col='red',linetype='longdash')
+g=g+geom_line(data=newpoints,aes(x=y,y=x),col='blue',linetype='longdash')
+g=g+stat_abline(col='grey')
+g=g+geom_line(data=oldpoints,aes(x=x,y=y),col='red',linetype='dotted')
+g+geom_line(data=oldpoints,aes(x=y,y=x),col='blue',linetype='dotted')
+
+```
+
+```{r}
+driverPerformance=function(driverRef){
+  results=dbGetQuery(ergastdb,paste('select r1.points as d1, r2.points as d2, constructorRef from results r1 join results r2 join races r join constructors c where r1.raceId=r2.raceId and r1.constructorId=r2.constructorId and c.constructorId=r1.constructorId and r.raceId=r1.raceId and r1.driverId!=r2.driverId and r2.driverId in (select driverId from drivers where driverRef="',driverRef,'")',sep=''))
+  ggplot(results,aes(x=d1,y=d2,col=constructorRef))+stat_sum(aes(size = ..n..))+stat_smooth(se=F)+geom_line(data=newpoints,aes(x=x,y=y),col='red',linetype='longdash')+geom_line(data=newpoints,aes(x=y,y=x),col='blue',linetype='longdash')+stat_abline(col='grey')+geom_line(data=oldpoints,aes(x=x,y=y),col='red',linetype='dotted')+geom_line(data=oldpoints,aes(x=y,y=x),col='blue',linetype='dotted') + coord_fixed()
+}
+```
+
+
+```{r}
+driverPerformanceByYear=function(driverRef,year){
+  results=dbGetQuery(ergastdb,paste('select r1.points as d1, r2.points as d2, constructorRef from results r1 join results r2 join races r join constructors c where r1.raceId=r2.raceId and r1.constructorId=r2.constructorId and c.constructorId=r1.constructorId and r.raceId=r1.raceId and r1.driverId!=r2.driverId and r2.driverId in (select driverId from drivers where driverRef="',driverRef,'") and year=',year,sep=''))
+  ggplot(results,aes(x=d1,y=d2,col=constructorRef))+stat_sum(aes(size = ..n..))+stat_smooth(se=F)+geom_line(data=newpoints,aes(x=x,y=y),col='red',linetype='longdash')+geom_line(data=newpoints,aes(x=y,y=x),col='blue',linetype='longdash')+stat_abline(col='grey')+geom_line(data=oldpoints,aes(x=x,y=y),col='red',linetype='dotted')+geom_line(data=oldpoints,aes(x=y,y=x),col='blue',linetype='dotted') + coord_fixed()
+}
+```
+
+??do chart for a team - need to anchor driver...
+
+```{r}
+#STILL NOT BRILLIANT - NEED TO SET SPECIFIC DRIVER - use > in driverId?
+teamPerformanceByYear=function(constructorRef,year){
+  results=dbGetQuery(ergastdb,paste('select r1.points as d1, r2.points as d2 from results r1 join results r2 join races r join constructors c where r1.raceId=r2.raceId and r1.constructorId=r2.constructorId and c.constructorId=r1.constructorId and r.raceId=r1.raceId and r1.driverId>r2.driverId and constructorRef="',constructorRef,'" and year=',year,sep=''))
+  ggplot(results,aes(x=d1,y=d2))+stat_sum(aes(size = ..n..))+stat_smooth(se=F)+geom_line(data=newpoints,aes(x=x,y=y),col='red',linetype='longdash')+geom_line(data=newpoints,aes(x=y,y=x),col='blue',linetype='longdash')+stat_abline(col='grey')+geom_line(data=oldpoints,aes(x=x,y=y),col='red',linetype='dotted')+geom_line(data=oldpoints,aes(x=y,y=x),col='blue',linetype='dotted') + coord_fixed()
+}
+```
+
+```{r}
+#STILL BROKEN - NEED TO SET SPECIFIC DRIVER - use > in driverId?
+teamPerformance=function(constructorRef,yearFacet=FALSE){
+  results=dbGetQuery(ergastdb,paste('select year, r1.points as d1, r2.points as d2 from results r1 join results r2 join races r join constructors c where r1.raceId=r2.raceId and r1.constructorId=r2.constructorId and c.constructorId=r1.constructorId and r.raceId=r1.raceId and r1.driverId>r2.driverId and constructorRef="',constructorRef,'"',sep=''))
+  g=ggplot(results,aes(x=d1,y=d2))+stat_sum(aes(size = ..n..))+stat_smooth(se=F)+geom_line(data=newpoints,aes(x=x,y=y),col='red',linetype='longdash')+geom_line(data=newpoints,aes(x=y,y=x),col='blue',linetype='longdash')+stat_abline(col='grey')+geom_line(data=oldpoints,aes(x=x,y=y),col='red',linetype='dotted')+geom_line(data=oldpoints,aes(x=y,y=x),col='blue',linetype='dotted') + coord_fixed()
+  if (yearFacet) g=g+facet_wrap(~year)
+  g
+}
+```
+
+
+To what extent does a team maximise its points haul profile?
+```{r}
+results=dbGetQuery(ergastdb,'select r1.points as d1, r2.points as d2 from results r1 join results r2 join races r join constructors c  where r1.raceId=r2.raceId and r1.constructorId=r2.constructorId and r.raceId=r1.raceId and r1.driverId!=r2.driverId and r1.points>r2.points and c.constructorId=r1.constructorId and constructorRef="mercedes" and  year >2010')
+ggplot(results,aes(x=d1,y=d2))+geom_jitter()+stat_smooth()+geom_line(data=newpoints,aes(x=x,y=y),col='red')
+```
+
+
+#Helper function to display database query result as a formatted table
+kdb=function(q){ kable(dbGetQuery(ergastdb,q)) }
+
+
+
+g=ggplot(results,aes(x=r1pos,y=r2pos,colour=year))
+g=g+geom_jitter()
+g=g+facet_wrap(~team)
+#g=g+geom_line(data=pos.points,aes(x=points,y=maximiser.points),col='red')
+#g=g+geom_line(data=teamPerformance,aes(x=pts,y=med_r2pts),col='magenta')
+g=g+xlab('Position of higher classified member of team')
+g+ylab('Position of lower classified member of team')
+
+
+
+```{r message=FALSE,warning=FALSE}
+results=dbGetQuery(ergastdb,'select constructorRef, r1.points as d1, r2.points as d2 from results r1 join results r2 join races r join constructors c  where r1.raceId=r2.raceId and r1.constructorId=r2.constructorId and r.raceId=r1.raceId and r1.driverId!=r2.driverId and r1.points>r2.points and c.constructorId=r1.constructorId  and  year >2010')
+ggplot(results,aes(x=d1,y=d2,col=constructorRef))+geom_jitter()+stat_smooth(se = F)+geom_line(data=data.frame(x=c(25,18,15,12,10,8,6,4,2,1,0),y=c(18,15,12,10,8,6,4,2,1,0,0)),aes(x=x,y=y),col='red')
+```
+
+
+
+This plots team performance for several teams in a single year
+```{r}
+results=dbGetQuery(ergastdb,'select constructorRef, r1.points as d1, r2.points as d2 from results r1 join results r2 join races r join constructors c  where r1.raceId=r2.raceId and r1.constructorId=r2.constructorId and r.raceId=r1.raceId and r1.driverId!=r2.driverId and r1.points>r2.points and c.constructorId=r1.constructorId  and  year >2012 and c.constructorId=r1.constructorId and constructorRef in ("red_bull","ferrari","mclaren","mercedes")')
+ggplot(results,aes(x=d1,y=d2,col=constructorRef))+geom_jitter()+stat_smooth(method='lm',se=F,aes(linetype=constructorRef))+geom_line(data=data.frame(x=c(25,18,15,12,10,8,6,4,2,1,0),y=c(18,15,12,10,8,6,4,2,1,0,0)),aes(x=x,y=y),col='red')
+```
+
+
+
+
+
+```{r}
+ggplot(results,aes(x=d1,y=d2,col=constructorRef))+geom_boxplot(aes(group=d1))+stat_smooth(method='lm',se=F,aes(linetype=constructorRef))+geom_line(data=data.frame(x=c(25,18,15,12,10,8,6,4,2,1,0),y=c(18,15,12,10,8,6,4,2,1,0,0)),aes(x=x,y=y),col='grey')+facet_wrap(~constructorRef)+geom_jitter(size=1,colour='black')
+```
+
+
+
+
+#POints performance charts
+
+OLDPOINTS=c(10,8,6,5,4,3,2,1)
+
+oldpoints=data.frame(x=c(OLDPOINTS,0),y=c(OLDPOINTS[-1],0,0))
+
+

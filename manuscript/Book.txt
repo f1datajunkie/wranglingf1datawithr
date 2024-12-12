@@ -1,0 +1,45 @@
+foreword.txt
+chapter-intro.md
+
+-# Introducing the tools and datasets
+chapter-introRdataframes.md
+
+chapter-ergast-data.md
+chapter-ergast-data-db.md
+chapter-f1comdata.md
+
+-# Exploring Practice Sessions
+chapter-practice.md
+chapter-practiceUtilisation.md
+
+-# Exploring Qualifying Sessions
+chapter-quali.md
+chapter-qualiUtil.md
+
+-# Exploring the Race
+chapter-lapchart.md
+chapter-raceHistoryChart.md
+chapter-battlemaps.md
+chapter-pitStops.md
+
+-# Driver and Team Analyses
+chapter-careerTrajectory.md
+
+chapter-streakiness.md
+chapter-churn.md
+chapter-lapsled.md
+chapter-eventDetection.md
+
+-# Season Reviews
+chapter-intraTeamDriverPerf.md
+chapter-pointsPerformanceCharts.md
+chapter-endofseasonshowdown.md
+chapter-championshipracecharts.md
+
+-# Where Next?
+
+chapter-conclusion.md
+chapter-bibliography.md
+
+-# Appendices
+appendix-ergast-sqlite.md

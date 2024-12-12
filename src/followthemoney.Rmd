@@ -1,0 +1,7 @@
+output:
+  html_document:
+    keep_md: yes
+---
+# Follow the Money
+
+https://f1metrics.wordpress.com/2015/05/01/how-money-predicts-success-in-formula-1/

@@ -1,0 +1,17 @@
+---
+output:
+  html_document:
+    keep_md: yes
+---
+```{r setup, echo = F, message=F}
+library(knitr)
+opts_chunk$set(fig.path = "images/pacechange-")
+```
+#Pace Change Tables
+
+If you have ever watched the timing screens associated with many forms of motorsport, you will be familiar with the idea that the laptimes are colour-coded against a black background to designate whether a particular driver has recorded a personal best laptime (green), the fastest laptime across all drivers in that session (magenta ("purple")) or is or has just pitted (red). The interval to the car ahead is typically displayed in a white font if the interval has reduced on the current lap relative to the previous lap (that is, the interval has decreased, or the drive is catching the car ahead) or yelllow otherwise. For sector times, purple represents the best overall to date, green a driver's personal best sector time, white for the most recent sector, or yellow otherwise. In this section, we will explore various ways for capturing the evolution of laptimes along several dimensions. This will include things like personal best (white) and best-to-date (purple) laptimes, as well as the time difference on each lap between:
+
+* the current lap laptime and the laptime for the previous lap for each driver;
+* the current lap laptime and the best laptime to date for each driver;
+* the interval or difference between each driver and the car ahead, compared to the previous lap.
+

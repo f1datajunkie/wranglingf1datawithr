@@ -1,0 +1,13 @@
+---
+output:
+  html_document:
+    keep_md: yes
+---
+```{r setup, echo = F, message=F}
+require(knitr)
+opts_chunk$set(fig.path = "images/safetycar-")
+```
+
+In .. we saw how it was possible to neutralise the effect of a safety car on the race history chart. So how might we automatically identify when the race has entered a safety car period?
+
+One way would be to make use of the *streakiness* tools to identify runs of laptimes across the whole field that are significantly slower than the typical laptimes.

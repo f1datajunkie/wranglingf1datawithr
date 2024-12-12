@@ -1,0 +1,491 @@
+  Rang Name                      Jg   Land/Ort                  Team                                  Zeit   Rückstand     Stnr  Kat/Rang       Schnitt¦ Punkte 
+    1. Hailemichael Estefanus    1982 Zürich                                                       34.39,2       -----      (1)  B        1.       3.09¦  1'100 
+    2. Mathys Christian          1987 Zuchwil                   Biel/Bienne Athletics              35.29,1      0.49,9    (636)  A        1.       3.13¦  1'090 
+    3. Roppo Pekka               1983 D-Klettgau                Kosken Kuohu (FIN)                 36.29,1      1.49,9    (668)  B        2.       3.19¦  1'027 
+    4. Brod Carsten              1972 D-Konstanz                TV Konstanz                        36.45,5      2.06,3    (742)  C        1.       3.20¦  1'070 
+    5. Flückiger Armin           1990 Rüeterswil                SC Diemberg / Tower Sports         36.47,3      2.08,1    (360)  A        2.       3.20¦  1'023 
+    6. Weber Philipp             1976 Zürich                                                       37.18,1      2.38,9    (164)  B        3.       3.23¦    973 
+    7. Sprenger Raphael          1987 Zürich                    TG Hütten                          37.20,8      2.41,6    (119)  A        3.       3.23¦    987 
+    8. Schäppi Simon             1991 Horgen                    TG Hütten                          37.23,5      2.44,3    (471)  A        4.       3.23¦    976 
+    9. Richle Stefan             1983 Wil SG                                                       37.47,4      3.08,2    (582)  B        4.       3.26¦    929 
+   10. Steinegger Gian-Flurin    1981 Bolligen                  Stadtturnverein Bern               37.53,7      3.14,5   (2214)  B        5.       3.26¦    916 
+   11. Birchmeier Ralf           1982 Buchs SG                  LAC TV Unterstrass                 37.55,5      3.16,3    (131)  B        6.       3.26¦    905 
+   12. Drescher Ivo              1993 Zürich                    LAC TVU                            38.02,1      3.22,9    (535)  A        5.       3.27¦    928 
+   13. Wolf Etienne              1971 Gundetswil                www.stopandgo.ch                   38.05,5      3.26,3    (121)  C        2.       3.27¦    963 
+   14. Candita Daniele           1975 Steckborn                 LSV Frauenfeld                     38.19,0      3.39,8    (398)  C        3.       3.29¦    957 
+   15. Kostyuchenko Nikita       1992 Wettingen                 LC Zürich                          38.39,0      3.59,8    (721)  A        6.       3.30¦    910 
+   16. Hegner Norbert            1965 Galgenen                  LG-TSV Galgenen                    38.39,9      4.00,7   (2065)  D        1.       3.30¦  1'000 
+   17. Schneidinger Patrick      1991 Winterthur                                                   38.41,4      4.02,2   (2312)  A        7.       3.31¦    909 
+   18. Stoffel Richard           1968 Zürich                    ALS Schweiz                        38.44,8      4.05,6   (2132)  C        4.       3.31¦    945 
+   19. Gehrig Roman              1969 Zürich                    SSC Sihltaler Sportclub, Langn     38.45,7      4.06,5    (107)  C        5.       3.31¦    945 
+   20. Tribelhorn Marc           1983 Winterthur                                                   38.53,6      4.14,4   (2226)  B        7.       3.32¦    877 
+   21. Thomson Mark              1970 Winterthur                Gantrischbike.ch Pro Team          38.58,8      4.19,6   (2133)  C        6.       3.32¦    939 
+   22. Blättler Beat             1976 Stallikon                 smrun / TV Unterstrass             39.02,5      4.23,3    (648)  B        8.       3.32¦    873 
+   23. Marquart Artho            1990 Uster                     LC Uster                           39.03,6      4.24,4   (2253)  A        8.       3.33¦    899 
+   24. Grosheny Philipp          1989 Arlesheim                 SV Basel/Wildcats                  39.12,1      4.32,9   (2057)  A        9.       3.33¦    895 
+   25. Schwab Darren             1973 Zürich                    Picnic Club                        39.15,6      4.36,4   (2271)  C        7.       3.34¦    931 
+   26. Lorimer Thomas            1984 Zürich                                                       39.17,8      4.38,6    (152)  B        9.       3.34¦    866 
+   27. Arnold Philipp            1987 Cham                      LAC TV Unterstrass                 39.19,0      4.39,8   (2269)  A        10.      3.34¦    892 
+   28. Peter Peter               1966 Männedorf                 LC Meilen                          39.24,1      4.44,9   (2227)  C        8.       3.34¦    928 
+   29. Bachmann Ivo              1975 Eschenbach SG             SC Diemberg smrun                  39.40,3      5.01,1   (2013)  C        9.       3.36¦    920 
+   30. Schenk Felix              1964 Wigoltingen               Run Fit Thurgau                    39.46,8      5.07,6      (2)  D        2.       3.36¦    971 
+   31. Schneble Max Charles      1980 Kilchberg ZH              Hintermann Racing / TTL            39.53,3      5.14,1    (167)  B        10.      3.37¦    848 
+   32. Augsburger Christian      1986 Thalheim an der Thur      LSV Frauenfeld                     39.59,5      5.20,3   (2012)  A        11.      3.38¦    872 
+   33. Kaufmann Roger            1974 Uster                     neujahrsmarathon.ch                40.02,7      5.23,5    (111)  C        10.      3.38¦    910 
+   34. Leuzinger Urs             1964 Räterschen                IWC Sportclub                      40.16,5      5.37,3    (186)  D        3.       3.39¦    958 
+   35. Aschwanden Yves           1994 Goldau                    OLG Goldau                         40.17,1      5.37,9    (336)  A        12.      3.39¦    864 
+   36. Goitom Tesfaslasie        1979 Frauenfeld                LSV Frauenfeld                     40.31,2      5.52,0   (2278)  B        11.      3.41¦    830 
+   37. Camenzind Flurin          1984 Tann                      SC Diemberg                        40.31,4      5.52,2   (2029)  B        12.      3.41¦    830 
+   38. Meng Patrick              ???? Winterthur                Meng Team                          40.41,0      6.01,8   (2248)  B        13.      3.41¦    825 
+   39. Dunne Matthew             1988 Zürich                                                       40.54,3      6.15,1    (183)  A        13.      3.43¦    847 
+   40. Genovese Gaetano          1959 S. Antonino               rc Bellinzona                      40.57,0      6.17,8   (2050)  D        4.       3.43¦    940 
+   41. Lagerström Mark           1977 Dübendorf                 SV WIEDIKON                        41.02,0      6.22,8    (117)  B        14.      3.43¦    815 
+   42. Pileggi Andrea            1964 Luzern                    Top-Gym Running                    41.03,9      6.24,7   (2105)  D        5.       3.43¦    937 
+   43. Varlet Benoît             1970 Rüti ZH                   LC Uster                           41.04,3      6.25,1   (2255)  C        11.      3.44¦    882 
+   44. Fischer Kai               1969 Geroldswil                LCZ                                41.08,3      6.29,1    (653)  C        12.      3.44¦    880 
+   45. Schudel Pascal            1983 Wil SG                                                       41.11,8      6.32,6    (596)  B        15.      3.44¦    811 
+   46. Zett Jirka                1982 Zürich                                                       41.13,3      6.34,1    (513)  B        16.      3.44¦    810 
+   47. Neri Filippo              1974 Thalwil                   smrun                              41.15,3      6.36,1    (163)  C        13.      3.45¦    877 
+   48. Giger Daniel              1973 Kilchberg ZH              SSC                                41.15,9      6.36,7   (2052)  C        14.      3.45¦    877 
+   49. Hofer Richard             1970 Henggart                  Team Erdinger Alkoholfrei          41.28,3      6.49,1    (297)  C        15.      3.46¦    871 
+   50. Frei Silvan               1957 Speicher                  LSV Region Gossau                  41.29,7      6.50,5   (2299)  D        6.       3.46¦    926 
+   51. Wegelin Ben               1988 Winterthur                LV Winterthur                      41.29,9      6.50,7   (2203)  A        14.      3.46¦    830 
+   52. Buner Roger               1975 Walenstadt                Stanilsaus-Runners                 41.32,8      6.53,6   (2264)  C        16.      3.46¦    869 
+   53. Volkart Rolf              1964 Schöfflisdorf             Impuls Triathlon Club Bülach       41.33,0      6.53,8   (2136)  D        7.       3.46¦    925 
+   54. Philipp Raphael           1992 Winterthur                Brazzo Running                     41.36,2      6.57,0   (2104)  A        15.      3.46¦    827 
+   55. Spreiter Patric           1979 Bauma                     VC Bauma / Giant                   41.40,4      7.01,2    (104)  B        17.      3.47¦    797 
+   56. Oberli Thomas             1970 Rümlang                   Trigether                          41.42,7      7.03,5     (86)  C        17.      3.47¦    865 
+   57. Niethammer Janik          1988 Bern                      OL Regio Wil                       41.47,2      7.08,0    (728)  A        16.      3.47¦    822 
+   58. Vuistiner Alexandre       1975 Winterthur                LV Winterthur                      41.47,3      7.08,1   (2265)  C        18.      3.47¦    863 
+   59. Zoder Roland              1972 Rotkreuz                                                     41.49,0      7.09,8   (2147)  C        19.      3.48¦    862 
+   60. Schubnell Lukas           1994 Elsau                     TG Hütten                          41.54,6      7.15,4   (2228)  A        17.      3.48¦    818 
+   61. Guarino Marco             1978 Volketswil                Tempo-Sport Bikespeed.ch           41.59,3      7.20,1     (91)  B        18.      3.49¦    788 
+   62. Mozzini Luca              1971 Camorino                  RC Bellinzona                      42.01,8      7.22,6   (2089)  C        20.      3.49¦    856 
+   63. Anderegg Yves             1972 Schlieren                                                    42.02,7      7.23,5    (678)  C        21.      3.49¦    856 
+   64. Schmid Ernst              1965 Udligenswil               Laufgruppe Cham                    42.06,5      7.27,3   (2245)  D        8.       3.49¦    910 
+   65. Kägi André                1964 Zürich                    LAC TV Unterstrass                 42.20,6      7.41,4   (2287)  D        9.       3.50¦    904 
+   66. Pfister Fredy             1956 Wilen b. Wil              PAIS Sport Team                    42.23,6      7.44,4   (2103)  D        10.      3.51¦    903 
+   67. Widmer Jakob              1956 Laupen ZH                 SC Diemberg / smrun                42.25,5      7.46,3    (308)  D        11.      3.51¦    902 
+   68. Gschwend Peter            1952 Kloten                    runandsmile / SMR                  42.27,4      7.48,2   (2325)  E        1.       3.51¦  1'000 
+   69. Früh Philipp              1981 Frauenfeld                LSV Frauenfeld                     42.27,7      7.48,5   (2048)  B        19.      3.51¦    774 
+   70. Aliji Bujalin             1977 Kreuzlingen               TV Konstanz                        42.31,5      7.52,3    (241)  B        20.      3.51¦    772 
+   71. Bosshard Pascal           1976 Zürich                    Jet Sport                          42.36,2      7.57,0   (2020)  B        21.      3.52¦    770 
+   72. Schmid Mark               1975 Zürich                    TV Oerlikon                        42.39,5      8.00,3   (2276)  C        22.      3.52¦    839 
+   73. Poulsen Jens              1979 Zürich                    ASVZ                               42.44,8      8.05,6   (2106)  B        22.      3.53¦    766 
+   74. Weibel Marc               1978 Wermatswil                                                   42.47,0      8.07,8   (2317)  B        23.      3.53¦    765 
+   75. Heitefuss Reto            1976 Heiden                                                       42.51,3      8.12,1    (185)  B        24.      3.53¦    763 
+   76. Huber Mathias             1980 Winterthur                ASVZ                               43.01,6      8.22,4    (343)  B        25.      3.54¦    758 
+   77. Kopplin Maximilian        1991 Altdorf UR                LTF Grojo#s Elversberg             43.02,5      8.23,3    (199)  A        18.      3.54¦    787 
+   78. Dunlop Stephen            1957 Altendorf                 Joggertreff Pfäffikon              43.05,8      8.26,6    (174)  D        12.      3.55¦    885 
+   79. Steindorf Niels           1988 Hüntwangen                                                   43.15,0      8.35,8   (2129)  A        19.      3.55¦    781 
+   80. Vonarburg Marc            1989 Zürich                                                       43.22,2      8.43,0    (643)  A        20.      3.56¦    777 
+   81. Weilenmann Felix          1973 Aegerten                  triseeland.ch                      43.36,5      8.57,3    (236)  C        23.      3.57¦    813 
+   82. Landolt Ruedi             1951 Winterthur                smrun                              43.40,3      9.01,1      (3)  E        2.       3.58¦    971 
+   83. Meier Sacha               1972 Flurlingen                                                   43.42,0      9.02,8   (2088)  C        24.      3.58¦    811 
+   84. Huser Peter               1954 Baar                      UBS Laufclub                       43.44,7      9.05,5   (2070)  E        3.       3.58¦    969 
+   85. Battaglia Simon           1969 Tann                                                         43.48,8      9.09,6    (679)  C        25.      3.58¦    808 
+   86. Gschweitl Michael         1980 Zürich                                                       43.56,3      9.17,1   (2058)  B        26.      3.59¦    732 
+   87. Wintsch Reto              1962 Müllheim Dorf                                                43.57,3      9.18,1    (178)  D        13.      3.59¦    863 
+   88. Gemperle Patrik           1976 Henggart                  SSC Langnau                        43.59,3      9.20,1   (2294)  B        27.      3.59¦    730 
+   89. Hirschi Werner            1952 Waldkirch                 LC Uzwil                           44.02,0      9.22,8   (2286)  E        4.       4.00¦    962 
+   90. Burri Fabian              1990 Bern                      3athlon Bern / TacTacTeam / WO     44.09,9      9.30,7   (2028)  A        21.      4.00¦    755 
+   91. Gutzwiller Mark           1973 Bubikon                                                      44.17,8      9.38,6   (2063)  C        26.      4.01¦    794 
+   92. Seematter Marc            1979 Zug                       LG ZKB                             44.19,4      9.40,2     (99)  B        28.      4.01¦    720 
+   93. Kuenzler Sascha           1975 Zürich                    Club Eau Rouge                     44.25,6      9.46,4    (663)  C        27.      4.02¦    791 
+   94. Graf Daniel               1977 Winterthur                                                   44.29,5      9.50,3   (2157)  B        29.      4.02¦    716 
+   95. Bösch Alex                1981 Thalwil                                                      44.29,9      9.50,7     (80)  B        30.      4.02¦    715 
+   96. Escaleira Alves           1979 Effretikon                                                   44.30,0      9.50,8    (446)  B        31.      4.02¦    715 
+   97. Kodde Bart                1989 Zürich                                                       44.31,1      9.51,9   (2289)  A        22.      4.02¦    745 
+   97. Stillhard Walter          1952 Frauenfeld                Run Fit Thurgau                    44.31,1      9.51,9    (431)  E        5.       4.02¦    951 
+   99. Stuber Robert             1955 Kriegstetten              LG Derendingen                     44.31,4      9.52,2   (2281)  E        6.       4.02¦    951 
+  100. Lancaster Joel            1987 Zürich                                                       44.32,0      9.52,8     (98)  A        23.      4.02¦    745 
+  101. Twardy Artur              1983 Altnau                    CITY- RUN MILOSLAW                 44.36,0      9.56,8    (290)  B        32.      4.03¦    712 
+  102. Lohri Philipp             1963 Frauenfeld                LSV Frauenfeld                     44.40,2     10.01,0   (2270)  D        14.      4.03¦    844 
+  103. Kuhn Mathias              1984 Schaffhausen              TriTeamSüsch                       44.40,4     10.01,2    (270)  B        33.      4.03¦    710 
+  104. Mann Karl                 1972 Switzerland                                                  44.41,9     10.02,7   (2084)  C        28.      4.03¦    783 
+  105. Schenker Thomas           1963 Winterthur                                                   44.49,3     10.10,1   (2117)  D        15.      4.04¦    840 
+  106. Vogel Marco               1965 Rüti ZH                                                      44.54,1     10.14,9    (105)  D        16.      4.04¦    838 
+  107. Egger Rene                1969 Zürich                                                       44.54,3     10.15,1   (2040)  C        29.      4.04¦    778 
+  108. Gut Daniel                1984 Zürich                                                       44.56,1     10.16,9   (2062)  B        34.      4.05¦    703 
+  109. Eisenring Lukas           1989 Oberuzwil                                                    44.56,4     10.17,2   (2279)  A        24.      4.05¦    733 
+  110. Nille Roman               1972 Zürich                                                       44.56,7     10.17,5    (424)  C        30.      4.05¦    777 
+  111. Stucki Erich              1973 Schaffhausen              LWS Schaffhausen                   44.58,5     10.19,3    (473)  C        31.      4.05¦    776 
+  112. Bischofberger Marcel      1982 Rapperswil SG                                                45.03,6     10.24,4   (2018)  B        35.      4.05¦    699 
+  113. Sigg Martin               1965 Oberhasli                                                    45.04,9     10.25,7   (2330)  D        17.      4.05¦    834 
+  114. Flisch Curdin             1963 Uesslingen                LSV Frauenfeld                     45.05,3     10.26,1   (2152)  D        18.      4.05¦    833 
+  115. Verlaan Wesley            1984 Wetzikon ZH                                                  45.05,9     10.26,7     (65)  B        36.      4.05¦    698 
+  116. Blöchlinger Michael       1977 Uster                     TV Dübendorf                       45.07,5     10.28,3    (682)  B        37.      4.06¦    697 
+  117. Rentzsch Jvo              1966 Winterthur                Lindberg Jogger                    45.07,6     10.28,4   (2266)  C        32.      4.06¦    772 
+  118. Werner Johannes           1964 Neftenbach                                                   45.15,0     10.35,8   (2291)  D        19.      4.06¦    829 
+  119. Kleeli Tobias             1986 Winterthur                Finishers Winterthur               45.15,9     10.36,7    (486)  A        25.      4.06¦    724 
+  120. Farner Pascal             1989 Märstetten                LSV Frauenfeld                     45.20,1     10.40,9   (2272)  A        26.      4.07¦    722 
+  121. Schröder Timo             1983 Sennhof (Winterthur)                                         45.23,2     10.44,0    (313)  B        38.      4.07¦    690 
+  122. Leiterer Reik             1981 Zürich                                                       45.25,7     10.46,5    (344)  B        39.      4.07¦    689 
+  123. Al-Thahiri Mohammed       1977 Winterthur                                                   45.26,2     10.47,0   (2004)  B        40.      4.07¦    688 
+  124. Urner Stefan              1960 Grüningen                 LC Meilen                          45.26,5     10.47,3    (698)  D        20.      4.07¦    824 
+  125. Quirici Giulio            1959 Hinteregg                 LG ZKB                             45.27,5     10.48,3    (493)  D        21.      4.07¦    824 
+  126. Gubelmann Reto            1985 Horgen                                                       45.31,9     10.52,7    (405)  B        41.      4.08¦    686 
+  127. Bertschi Thomas           1968 Hüntwangen                running.COACH                      45.34,4     10.55,2    (701)  C        33.      4.08¦    760 
+  128. Hausammann Urs            1965 Zürich                                                       45.38,7     10.59,5     (81)  D        22.      4.08¦    819 
+  129. Matter Christoph          1981 Oberohringen                                                 45.39,3     11.00,1   (2247)  B        42.      4.09¦    682 
+  130. Stoffel Florin            1985 Kilchberg ZH                                                 45.42,1     11.02,9    (258)  B        43.      4.09¦    681 
+  131. Tischhauser Guido         1971 Winterthur                                                   45.46,5     11.07,3    (733)  C        34.      4.09¦    754 
+  132. Coimbra Artur             1960 Zürich                                                       45.48,7     11.09,5    (445)  D        23.      4.09¦    815 
+  133. Vogel Michael             1985 Winterthur                Sven's                             45.51,9     11.12,7     (84)  B        44.      4.10¦    676 
+  134. Hanselmann Daniel         1965 Neftenbach                                                   45.52,9     11.13,7   (2329)  D        24.      4.10¦    813 
+  134. Kummer Stefan             1982 Fahrweid                                                     45.52,9     11.13,7    (311)  B        45.      4.10¦    675 
+  136. Binkert Andreas           1980 Winterthur                ASVZ                               45.56,1     11.16,9   (2017)  B        46.      4.10¦    674 
+  137. Asper Daniel              1986 Affoltern am Albis                                           45.59,9     11.20,7   (2238)  A        27.      4.10¦    703 
+  138. Pereira Michael           1985 Effretikon                                                   46.00,7     11.21,5    (129)  B        47.      4.10¦    672 
+  139. Studer Patrick            1987 Zürich                                                       46.03,6     11.24,4    (228)  A        28.      4.11¦    701 
+  140. Klarer Gerhard            1954 Graltshausen              Run Fit Thurgau                    46.04,0     11.24,8   (2327)  E        7.       4.11¦    914 
+  141. Sommer Patrick            1974 Winterthur                                                   46.04,3     11.25,1    (314)  C        35.      4.11¦    746 
+  142. Bänziger Peter            1959 Rehetobel                 SV Rehetobel                       46.04,4     11.25,2    (618)  D        25.      4.11¦    808 
+  143. Erb Markus                1964 Neftenbach                                                   46.07,0     11.27,8   (2320)  D        26.      4.11¦    807 
+  144. Meier Florian             1980 Tann                                                         46.12,9     11.33,7    (212)  B        48.      4.12¦    666 
+  145. Schmid Sämi               1954 Frauenfeld                LSV Frauenfeld                     46.13,3     11.34,1   (2323)  E        8.       4.12¦    911 
+  146. Caminada Rafael           1972 Kloten                                                       46.19,3     11.40,1    (625)  C        36.      4.12¦    739 
+  147. Meier Stefan              1970 Wädenswil                 ewz power team                     46.21,2     11.42,0    (162)  C        37.      4.12¦    738 
+  148. Uhr Daniel                1982 Bubikon                                                      46.25,4     11.46,2    (100)  B        49.      4.13¦    660 
+  149. Maingot Nicolas           1969 Zürich                                                       46.27,5     11.48,3   (2199)  C        38.      4.13¦    736 
+  150. Helbling Daniel           1967 Schänis                                                      46.28,7     11.49,5   (2262)  C        39.      4.13¦    735 
+  151. Rousseau Geoffroy         1978 Winterthur                                                   46.31,8     11.52,6   (2112)  B        50.      4.13¦    657 
+  152. Peter Andreas             1975 Olten                     Finishers Winterthur               46.35,0     11.55,8   (2102)  C        40.      4.14¦    732 
+  153. Schmid Christian          1970 Hofstetten ZH                                                46.37,4     11.58,2   (2120)  C        41.      4.14¦    731 
+  154. Harrison Alastair         1978 Zug                                                          46.40,1     12.00,9    (447)  B        51.      4.14¦    653 
+  155. Müller Peter              1962 Dübendorf                                                    46.50,2     12.11,0    (271)  D        27.      4.15¦    788 
+  156. Vilchez Martin            1978 Zürich                    TV Oerlikon                        46.52,1     12.12,9    (609)  B        52.      4.15¦    647 
+  157. Bisang Matthias           1972 Winterthur                                                   46.55,3     12.16,1    (293)  C        42.      4.15¦    723 
+  158. Scheps Alfio              1952 Geroldswil                LC Regensdorf                      47.01,2     12.22,0   (2305)  E        9.       4.16¦    892 
+  159. Moreno Antolin Jose Migue 1959 E-Collado Villalba MADRID                                    47.01,4     12.22,2     (31)  D        28.      4.16¦    783 
+  160. Cornuz Roger              1969 Winterthur                Gring abe u seckle                 47.02,1     12.22,9    (650)  C        43.      4.16¦    720 
+  161. Yamauchi Yohei            1976 Zürich                                                       47.03,1     12.23,9    (191)  B        53.      4.16¦    642 
+  162. Hug Peter                 1958 Hombrechtikon             LC Meilen                          47.05,1     12.25,9    (718)  D        29.      4.16¦    782 
+  163. Siegrist Marcel           1972 Hettlingen                runningcoach.ch                    47.06,3     12.27,1    (347)  C        44.      4.16¦    718 
+  164. Steiner Simon             1987 Winterthur                                                   47.11,0     12.31,8   (2130)  A        29.      4.17¦    670 
+  165. Wyder Thomas              1969 Hofstetten ZH                                                47.13,8     12.34,6   (2234)  C        45.      4.17¦    715 
+  166. Bolli Benjamin            1979 Ettenhausen TG            LVH                                47.17,8     12.38,6    (325)  B        54.      4.17¦    635 
+  167. Bangerter Andreas         1988 Thun                                                         47.19,4     12.40,2   (2219)  A        30.      4.18¦    666 
+  168. Bühler Hansruedi          1959 Kirchberg SG              ESV Soldanella                     47.20,6     12.41,4   (2290)  D        30.      4.18¦    775 
+  169. Gerhardy Stefan           1986 Zürich                                                       47.24,1     12.44,9    (170)  A        31.      4.18¦    664 
+  170. Klisaric Dragan           1971 Zürich                    cityrunning.ch                     47.32,2     12.53,0    (720)  C        46.      4.19¦    706 
+  171. Käsbohrer Roli            1964 Mönchaltorf                                                  47.35,4     12.56,2     (59)  D        31.      4.19¦    769 
+  172. Nef Marcel                1967 Schaffhausen              Beutelsend                         47.37,8     12.58,6    (214)  C        47.      4.19¦    704 
+  173. Pretterhofer Günter       1963 Uitikon Waldegg                                              47.40,4     13.01,2    (118)  D        32.      4.20¦    767 
+  174. Knobel Wilfried           1958 Rümlang                   TV Unterstrass                     47.45,7     13.06,5   (2297)  D        33.      4.20¦    764 
+  175. Stucki Carlos             1971 Horgen                                                       47.47,1     13.07,9    (605)  C        48.      4.20¦    700 
+  176. Resegatti Diego           1986 Rapperswil SG             SC Diemberg                        47.49,6     13.10,4    (691)  A        32.      4.20¦    652 
+  177. Läderach Peter            1953 Sulzbach                                                     47.53,4     13.14,2    (722)  E        10.      4.21¦    872 
+  178. Trüssel Stefan            1974 Uster                                                        47.54,1     13.14,9   (2134)  C        49.      4.21¦    696 
+  179. Galladé Nicolas           1975 Winterthur                Team Salon Erika                   48.04,5     13.25,3   (2049)  C        50.      4.22¦    692 
+  180. Fusco Carlo               1966 Siebnen                   joggerträff pfäffikon              48.07,7     13.28,5   (2251)  C        51.      4.22¦    690 
+  180. Schafer Rafael            1983 Winterthur                Antonov                            48.07,7     13.28,5   (2182)  B        55.      4.22¦    611 
+  182. Bräm Moritz               1983 Winterthur                                                   48.09,1     13.29,9    (309)  B        56.      4.22¦    610 
+  183. Holletschke Heiko         1963 Balterswil                FC Volketswil                      48.10,8     13.31,6    (133)  D        34.      4.22¦    753 
+  184. Van Kevin Q B             1979 Bülach                                                       48.11,0     13.31,8     (64)  B        57.      4.22¦    609 
+  185. Zwahlen Jürg              1958 Port                                                         48.11,7     13.32,5   (2258)  D        35.      4.22¦    753 
+  186. Streule Bruno             1964 Dietlikon                 LG ZKB                             48.14,9     13.35,7    (221)  D        36.      4.23¦    752 
+  187. Ulrich Josef              1965 Luzern                                                       48.19,4     13.40,2   (2314)  D        37.      4.23¦    750 
+  188. Santschi Christian        1962 Neftenbach                                                   48.20,4     13.41,2   (2303)  D        38.      4.23¦    749 
+  189. Grob Christian            1969 Fehraltorf                smrun                              48.24,8     13.45,6   (2179)  C        52.      4.24¦    682 
+  190. Friedrich Stefan          1967 Winterthur                finishers Winterthur               48.27,0     13.47,8    (250)  C        53.      4.24¦    681 
+  191. Wettstein Markus          1983 Russikon                  LC Uster                           48.27,9     13.48,7   (2141)  B        58.      4.24¦    601 
+  192. Randig Christian          1978 Langnau am Albis                                             48.30,4     13.51,2    (287)  B        59.      4.24¦    600 
+  193. Meier Tobias              1979 Winterthur                                                   48.33,1     13.53,9   (2154)  B        60.      4.24¦    598 
+  194. Caranci Renato            1986 Wollerau                                                     48.36,5     13.57,3    (476)  A        33.      4.25¦    630 
+  195. Seelhofer Michael         1976 Winterthur                                                   48.36,7     13.57,5   (2274)  B        61.      4.25¦    597 
+  196. Strasser Patrick          1971 Oberhallau                OLG Schaffhausen                   48.39,4     14.00,2    (227)  C        54.      4.25¦    676 
+  197. Debrunner Roman           1967 Winterthur                                                   48.43,3     14.04,1    (479)  C        55.      4.25¦    674 
+  198. Peter Jack                1953 Hettlingen                LG Hettlingen                      48.52,1     14.12,9    (492)  E        11.      4.26¦    848 
+  199. Wick Alois                1953 Zürich                                                       48.53,7     14.14,5    (240)  E        12.      4.26¦    848 
+  200. Rybinski Waldemar         1971 Winterthur                                                   48.55,6     14.16,4   (2153)  C        56.      4.26¦    668 
+  201. Vetterli Thomas           1954 Wermatswil                                                   49.01,8     14.22,6     (50)  E        13.      4.27¦    845 
+  202. Adank Kurt                1967 Mettmenstetten                                               49.08,6     14.29,4    (615)  C        57.      4.28¦    663 
+  203. Huber Christian           1964 Zürich                                                       49.12,1     14.32,9    (504)  D        39.      4.28¦    727 
+  203. Kistler Roger             1971 Lachen SZ                 joggerträff pfäffikon              49.12,1     14.32,9   (2072)  C        58.      4.28¦    661 
+  205. Widmer Thomas             1976 Frauenfeld                                                   49.16,7     14.37,5    (262)  B        62.      4.28¦    577 
+  206. Keller Stephan            1959 Uster                     Bachtel Runner`s                   49.20,5     14.41,3   (2309)  D        40.      4.29¦    723 
+  207. Zaugg Jérôme              1985 Russikon                  Old School Cycling Team            49.23,3     14.44,1    (348)  B        63.      4.29¦    574 
+  208. Soares Vitor              1967 Schlieren                                                    49.26,7     14.47,5   (2126)  C        59.      4.29¦    654 
+  209. Güttinger Alain           1978 Winterthur                                                   49.28,0     14.48,8    (257)  B        64.      4.29¦    572 
+  210. Galati Francesco          1944 Zürich                                                       49.28,7     14.49,5      (6)  Y        1.       4.29¦  1'000 
+  211. Schönenberger Josef       1955 Mosnang                   LR Mosnang                         49.29,8     14.50,6   (2307)  E        14.      4.29¦    834 
+  212. Rapold Beat               1955 Neuhausen am Rheinfall    SRS Lauftreff SH                   49.31,5     14.52,3    (581)  E        15.      4.30¦    833 
+  213. Kessler Rolf              1953 Frauenfeld                LSV Frauenfeld                     49.31,7     14.52,5    (460)  E        16.      4.30¦    833 
+  214. Bosshard Peter            1962 Felben-Wellhausen         LSV Frauenfeld                     49.34,8     14.55,6    (524)  D        41.      4.30¦    717 
+  215. Solenthaler Nicolas       1992 Winterthur                                                   49.35,0     14.55,8   (2254)  A        34.      4.30¦    602 
+  216. Haas Andreas              1983 Effretikon                TG Hütten                          49.37,0     14.57,8    (220)  B        65.      4.30¦    568 
+  217. Zeller Philipp            1970 Gachnang                  LSV Frauenfeld                     49.37,4     14.58,2    (644)  C        60.      4.30¦    650 
+  218. Crettaz Anthony           1974 Bülach                                                       49.42,2     15.03,0    (529)  C        61.      4.31¦    647 
+  219. Lobsiger Jan              1994 Ossingen                                                     49.56,5     15.17,3    (127)  A        35.      4.32¦    592 
+  220. Bichsel Peter             1965 Winterthur                dapp-Starbicycle-Team              50.00,3     15.21,1    (647)  D        42.      4.32¦    706 
+  221. Bärtschi Pascal           1991 Winterthur                                                   50.01,6     15.22,4    (295)  A        36.      4.32¦    590 
+  222. Kappeler Beat             1975 Niederglatt ZH                                               50.03,0     15.23,8   (2293)  C        62.      4.33¦    638 
+  223. Braun Markus              1972 Otelfingen                                                   50.03,2     15.24,0     (36)  C        63.      4.33¦    638 
+  224. Hess Martin               1975 Nürensdorf                                                   50.04,4     15.25,2    (716)  C        64.      4.33¦    637 
+  225. Melliger Frank            1960 Dietikon                                                     50.05,7     15.26,5    (420)  D        43.      4.33¦    704 
+  226. Greminger Andreas         1970 Zürich                                                       50.07,7     15.28,5     (53)  C        65.      4.33¦    636 
+  227. Gromann Thomas            1971 Zürich                                                       50.11,2     15.32,0    (109)  C        66.      4.33¦    634 
+  228. Strassmann Heinz          1967 Seuzach                   KBCW.ch                            50.12,3     15.33,1    (497)  C        67.      4.33¦    634 
+  229. Oberkalmsteiner Karl      1944 Schänis                                                      50.15,0     15.35,8      (7)  Y        2.       4.34¦    984 
+  230. Haeuptli Patrick          1969 Andelfingen                                                  50.15,4     15.36,2   (2064)  C        68.      4.34¦    632 
+  231. Glaus Markus              1976 Winterthur                Neue Sektion Winterthur            50.17,6     15.38,4   (2054)  B        66.      4.34¦    548 
+  232. Abegg Thomas              1968 Volketswil                3star cats                         50.22,1     15.42,9   (2001)  C        69.      4.34¦    629 
+  233. Landolt Oliver            1980 Winterthur                springermarkt.ch                   50.23,1     15.43,9    (723)  B        67.      4.34¦    546 
+  234. Suter Pirmin              1969 Baar                      Laufgruppe Cham                    50.24,9     15.45,7    (384)  C        70.      4.34¦    628 
+  234. Walti Jj Jörg             1964 Winterthur                                                   50.24,9     15.45,7    (315)  D        44.      4.34¦    696 
+  236. Berni Claudio             1967 Hombrechtikon                                                50.26,6     15.47,4   (2016)  C        71.      4.35¦    627 
+  237. Gattiker Roger            1972 Winkel                                                       50.27,3     15.48,1    (481)  C        72.      4.35¦    627 
+  238. Blöchlinger Roland        1966 Eschenbach SG             SC Diemberg                        50.28,2     15.49,0   (2277)  C        73.      4.35¦    626 
+  239. Frei Jürg                 1970 Seuzach                                                      50.33,2     15.54,0     (94)  C        74.      4.35¦    624 
+  240. Rizzoli Flavio            1969 Hittnau                   Papajoe                            50.34,0     15.54,8     (82)  C        75.      4.35¦    624 
+  241. Helbling Michael          1975 Winterthur                Arosa Trailrun                     50.34,7     15.55,5    (407)  C        76.      4.35¦    624 
+  242. Hocevar Primoz            1977 Dübendorf                 OK GP Dübendorf                    50.35,3     15.56,1    (687)  B        68.      4.35¦    540 
+  243. Hunziker Michael          1980 Winterthur                                                   50.39,0     15.59,8   (2193)  B        69.      4.36¦    538 
+  244. Bertschinger Erwin        1962 Volketswil                LC Uster                           50.45,6     16.06,4   (2318)  D        45.      4.36¦    687 
+  245. Maier Alban               1980 Winterthur                                                   50.55,1     16.15,9   (2282)  B        70.      4.37¦    530 
+  246. Spörri Roland             1978 Neschwil                                                     50.56,8     16.17,6   (2237)  B        71.      4.37¦    529 
+  247. Leimgruber Jörg           1963 Dietikon                  smrun /  TTL / LC UBS              51.00,5     16.21,3    (414)  D        46.      4.38¦    680 
+  248. Bevilaqua Vincenzo        1981 Zürich                                                       51.01,4     16.22,2    (161)  B        72.      4.38¦    527 
+  249. Rapendy Emmanuel          1978 Dübendorf                                                    51.08,0     16.28,8    (136)  B        73.      4.38¦    524 
+  250. Wiget Peter               1970 Frick                                                        51.08,6     16.29,4    (610)  C        77.      4.38¦    608 
+  251. Steiner Stefan            1964 Basel                                                        51.09,6     16.30,4   (2131)  D        47.      4.39¦    676 
+  252. Murtaj Florim             1971 Kreuzlingen                                                  51.09,9     16.30,7    (284)  C        78.      4.39¦    608 
+  253. Lehmann Samuel            1973 Nänikon                   light runners                      51.10,9     16.31,7   (2078)  C        79.      4.39¦    607 
+  254. Blumer Markus             1960 Wermatswil                                                   51.11,6     16.32,4    (619)  D        48.      4.39¦    675 
+  255. Rüeger Urs                1951 Winterthur                finishers winterthur               51.13,2     16.34,0   (2267)  E        17.      4.39¦    793 
+  256. Brecht Jens               1975 Winterthur                                                   51.26,3     16.47,1   (2021)  C        80.      4.40¦    600 
+  257. Wullschleger Rene         1963 Pfungen                   Schlossgarage                      51.28,8     16.49,6    (272)  D        49.      4.40¦    668 
+  258. Selbert Stefan            1965 D-Jestetten               VMC Rheinfall                      51.30,7     16.51,5    (672)  D        50.      4.40¦    667 
+  259. Gentsch Martin            1983 Zürich                                                       51.34,6     16.55,4   (2051)  B        74.      4.41¦    511 
+  260. Pedrini Claudio           1980 Opfikon                                                      51.36,0     16.56,8   (2273)  B        75.      4.41¦    510 
+  261. Kubli Matthias            1982 Kloten                    3athlon Bern                       51.36,5     16.57,3    (662)  B        76.      4.41¦    510 
+  262. Kleindienst Nathanael     1974 Winterthur                cityrunning.ch                     51.36,6     16.57,4   (2304)  C        81.      4.41¦    595 
+  263. Moser Christof            1982 Winterthur                finishers winterthur               51.39,9     17.00,7    (690)  B        77.      4.41¦    509 
+  264. Koch Roger                1963 Rottenschwil              LVF Muri AG                        51.41,0     17.01,8   (2331)  D        51.      4.41¦    663 
+  265. Trachsel Nicolas          1990 Mönchaltorf                                                  51.42,0     17.02,8   (2243)  A        37.      4.42¦    543 
+  266. Foerster Sti              1963 Baar                      Laufgruppe Cham                    51.44,1     17.04,9    (627)  D        52.      4.42¦    661 
+  267. Sturm Jürg                1957 Adliswil                  SSC Langnau am Albis               51.45,5     17.06,3    (383)  D        53.      4.42¦    661 
+  268. Heusser Daniel            1964 Hinwil                    LG ZKB                             51.47,5     17.08,3     (73)  D        54.      4.42¦    660 
+  269. De Lapersonne Christophe  1969 Winterthur                                                   51.47,6     17.08,4     (43)  C        82.      4.42¦    590 
+  270. Cataldo Vincenzo          1967 Frauenfeld                LSV Frauenfeld                     51.50,5     17.11,3   (2032)  C        83.      4.42¦    589 
+  271. Model Martin              1957 Bettwiesen                                                   51.53,0     17.13,8   (2302)  D        55.      4.43¦    658 
+  272. Morger Stefan             1980 Uetliburg SG              TriTeamSüsch                       51.53,9     17.14,7   (2319)  B        78.      4.43¦    502 
+  273. Wyser Norbert             1956 Wädenswil                 Tempo Sport Thalwil                51.54,6     17.15,4    (612)  D        56.      4.43¦    657 
+  274. Brunold Andrea            1958 Adliswil                  SSC-Langnau                        51.57,2     17.18,0   (2023)  D        57.      4.43¦    656 
+  275. Egli Peter                1977 Winterthur                                                   51.57,5     17.18,3   (2041)  B        79.      4.43¦    500 
+  276. Springmann René           1968 Beringen                                                     51.58,5     17.19,3    (130)  C        84.      4.43¦    586 
+  277. Zimmermann Ruedi          1966 Urdorf                                                       51.58,6     17.19,4    (269)  C        85.      4.43¦    585 
+  278. Rüegg Martin              1970 Dägerlen                  thurtalrunners                     51.59,2     17.20,0    (731)  C        86.      4.43¦    585 
+  279. Möckli Daniel             1973 Basadingen                                                   51.59,3     17.20,1    (304)  C        87.      4.43¦    585 
+  280. Aeppli Dani               1973 Winterthur                MAN-Turbo                          52.00,7     17.21,5   (2003)  C        88.      4.43¦    585 
+  281. Huber Edi                 1955 Rapperswil SG             Laufträff Rapperswil-Jona          52.04,2     17.25,0    (328)  E        18.      4.44¦    773 
+  282. Rüeger Ronald             1973 Holzhäusern ZG                                               52.05,3     17.26,1    (638)  C        89.      4.44¦    582 
+  283. Waldispühl Otto           1952 Frauenfeld                                                   52.10,4     17.31,2    (442)  E        19.      4.44¦    771 
+  284. Dogan Aydin               1985 Winterthur                                                   52.16,4     17.37,2    (147)  B        80.      4.45¦    491 
+  285. Vogt Markus               1959 Winterthur                Lindberg Joggers                   52.18,7     17.39,5    (256)  D        58.      4.45¦    647 
+  286. Helbling Renato           1958 Winkel                    ESC Solldancla                     52.20,3     17.41,1   (2306)  D        59.      4.45¦    646 
+  287. Blümner Ramon             1976 Eglisau                                                      52.22,7     17.43,5   (2300)  B        81.      4.45¦    488 
+  288. Bächli Alexander          1980 Wetzikon ZH                                                  52.24,2     17.45,0    (192)  B        82.      4.45¦    487 
+  289. Dreyer Richard            1954 Urdorf                                                       52.25,0     17.45,8    (229)  E        20.      4.45¦    765 
+  290. Rickli Jörg               1967 Schaffhausen              ewz power team                     52.28,0     17.48,8   (2110)  C        90.      4.46¦    572 
+  291. Schmalz Hans              1951 Grüningen                 smrun                              52.30,5     17.51,3   (2119)  E        21.      4.46¦    763 
+  292. Plüss Markus              1961 Bauma                                                        52.36,5     17.57,3     (32)  D        60.      4.46¦    639 
+  293. Robert-Tissot Willy       1954 Uster                                                        52.37,0     17.57,8    (494)  E        22.      4.47¦    760 
+  294. Müller Markus             1971 Männedorf                                                    52.37,4     17.58,2    (371)  C        91.      4.47¦    568 
+  295. Dieterich Lothar          1979 Zürich                                                       52.41,1     18.01,9    (651)  B        83.      4.47¦    479 
+  296. Sablone Gregorio          1937 Zürich                    smrun                              52.41,3     18.02,1    (187)  Y        3.       4.47¦    935 
+  297. Crosara Michel            1968 Räterschen                                                   52.45,8     18.06,6   (2295)  C        92.      4.47¦    564 
+  298. Eremia Radu               1965 Burgdorf                                                     52.49,7     18.10,5    (148)  D        61.      4.48¦    633 
+  299. Gomringer Max             1966 Henggart                                                     52.49,9     18.10,7   (2056)  C        93.      4.48¦    562 
+  300. Müller Matthias           1972 Winterthur                LG ZKB                             52.50,1     18.10,9    (488)  C        94.      4.48¦    562 
+  301. Gossweiler Tom            1978 Effretikon                                                   52.52,9     18.13,7    (503)  B        84.      4.48¦    473 
+  302. Scarcella Giovanni        1963 Luzern Reussbühl                                             52.54,3     18.15,1    (441)  D        62.      4.48¦    631 
+  303. Piras Davide              1977 Glattpark (Opfikon)                                          52.57,2     18.18,0    (331)  B        85.      4.48¦    471 
+  304. Fenetre Ulrich            1978 Zürich                                                       53.01,2     18.22,0    (401)  B        86.      4.49¦    469 
+  305. Hirschle Bernd            1967 Rheinau                   Schwimmclub Rheinau                53.03,6     18.24,4   (2067)  C        95.      4.49¦    556 
+  306. Gerber Kaspar             1979 Grenchen                                                     53.04,9     18.25,7    (483)  B        87.      4.49¦    468 
+  307. Gut Martin                1990 Brüttisellen                                                 53.07,2     18.28,0    (206)  A        38.      4.49¦    503 
+  308. Den Dekker Albert         1977 Kreuzlingen                                                  53.07,3     18.28,1    (705)  B        88.      4.49¦    467 
+  309. Emerick Ryan              1974 Zürich                                                       53.10,8     18.31,6    (321)  C        96.      4.50¦    553 
+  310. Mecchia Francesco         1969 Zürich                                                       53.11,7     18.32,5   (2259)  C        97.      4.50¦    552 
+  311. Graf Michael              1979 Au ZH                                                        53.12,7     18.33,5   (2216)  B        89.      4.50¦    464 
+  312. Rüegg Roger               1965 Winterthur                                                   53.15,0     18.35,8    (166)  D        63.      4.50¦    622 
+  313. Strässler Simon           1979 Buchs ZH                                                     53.16,1     18.36,9    (281)  B        90.      4.50¦    462 
+  314. Hollenstein Roland        1970 Guntershausen b. Aadorf   Skiclub Maischhausen               53.16,4     18.37,2    (251)  C        98.      4.50¦    550 
+  315. Teuscher Michel           1985 Tagelswangen                                                 53.19,9     18.40,7    (114)  B        91.      4.50¦    460 
+  315. Wyss Andreas              1981 Dottikon                                                     53.19,9     18.40,7     (70)  B        91.      4.50¦    460 
+  317. Rehmann Stefan            1952 Embrach                   LC UBS / smrun                     53.27,4     18.48,2   (2108)  E        23.      4.51¦    740 
+  318. Jäger Hansjürg            1987 Bülach                                                       53.29,9     18.50,7     (96)  A        39.      4.51¦    492 
+  319. Weber Jörg                1958 Fehraltorf                TV GGW                             53.30,1     18.50,9    (209)  D        64.      4.51¦    616 
+  320. Gibel Richard             1953 Dürnten                                                      53.30,5     18.51,3   (2284)  E        24.      4.51¦    739 
+  321. Sebek Zsolti              1979 Wangen b. Dübendorf       FreeRadicals                       53.30,6     18.51,4    (108)  B        93.      4.51¦    455 
+  322. Kavruk Alp                1971 Flurlingen                                                   53.33,0     18.53,8   (2311)  C        99.      4.52¦    543 
+  322. Meier Thomas              1969 Hettlingen                                                   53.33,0     18.53,8    (213)  C        99.      4.52¦    543 
+  324. Meyer Robert              1956 Bonstetten                                                   53.33,2     18.54,0    (637)  D        65.      4.52¦    614 
+  325. Boss Roland               1960 Hinteregg                 TRIZO                              53.39,0     18.59,8    (444)  D        66.      4.52¦    612 
+  326. Oliveira Jorge            1963 Kloten                                                       53.45,3     19.06,1   (2246)  D        67.      4.53¦    609 
+  327. Ziegler Michael           1965 Weinfelden                Run Fit Thurgau                    53.48,1     19.08,9   (2146)  D        68.      4.53¦    608 
+  328. Eberhard Simon            1978 Winterthur                                                   53.50,8     19.11,6   (2038)  B        94.      4.53¦    446 
+  329. Meier Pascal              1988 Luzern                                                       53.54,5     19.15,3    (746)  A        40.      4.54¦    480 
+  330. Andrews John              1950 Wollerau                  joggerträff pfäffikon sz           53.54,6     19.15,4   (2288)  E        25.      4.54¦    730 
+  331. Rusterholz Marcel         1984 Hochfelden                                                   53.55,1     19.15,9     (45)  B        95.      4.54¦    444 
+  332. von Ballmoos Jörg         1968 Vordemwald                smrun                              53.55,3     19.16,1    (307)  C        101.     4.54¦    533 
+  333. Grass Leonhard            1968 Zürich                                                       53.58,8     19.19,6     (72)  C        102.     4.54¦    531 
+  334. Hirschi Heinz             1956 Hettlingen                                                   53.59,9     19.20,7    (277)  D        69.      4.54¦    603 
+  335. Scherrer Andreas          1970 Pfyn                      thurgorienta                       54.01,1     19.21,9   (2118)  C        103.     4.54¦    530 
+  336. Crosara Patrick           1970 Bassersdorf               eplus gmbh                         54.04,7     19.25,5   (2296)  C        104.     4.54¦    528 
+  337. Brunner Peter             1952 Forch                     LG ZKB                             54.10,4     19.31,2   (2022)  E        26.      4.55¦    724 
+  338. D'Alberto Marco           1987 Winterthur                                                   54.11,0     19.31,8   (2033)  A        41.      4.55¦    473 
+  339. Kammerlander Marzell      1955 Illnau                    Panda Experience                   54.14,6     19.35,4    (719)  E        27.      4.55¦    722 
+  340. Pfister Matthias          1959 Thalwil                   LG ZKB                             54.22,1     19.42,9    (207)  D        70.      4.56¦    593 
+  341. Sigrist Erwin             1965 Wald ZH                                                      54.24,1     19.44,9    (495)  D        71.      4.56¦    592 
+  342. Schweizer Marcel          1974 Dietlikon                                                    54.30,2     19.51,0   (2122)  C        105.     4.57¦    517 
+  343. Filbry Gordon-David       1979 Olten                     smrun                              54.39,5     20.00,3   (2257)  B        96.      4.58¦    422 
+  344. Tikhomirov Arnold Kirill  1981 Winterthur                                                   54.42,8     20.03,6    (306)  B        97.      4.58¦    421 
+  345. Camenzind Rolf            1962 Weisslingen               OLG Wislig                         54.46,3     20.07,1    (210)  D        72.      4.58¦    583 
+  346. Kohler Daniel             1978 Winterthur                Finishers Winterthur               54.48,9     20.09,7   (2268)  B        98.      4.58¦    418 
+  347. Vogel Eduard              1952 Embrach                   runandsmile.ch                     54.54,0     20.14,8   (2135)  E        28.      4.59¦    706 
+  348. Wisler Andreas            1975 Winterthur                                                   54.54,6     20.15,4     (34)  C        106.     4.59¦    506 
+  349. Rada Alberto              1966 Landquart                                                    54.58,7     20.19,5    (225)  C        107.     4.59¦    504 
+  350. Arbenz Peter              1959 Altendorf                 sm run                             55.08,5     20.29,3    (181)  D        73.      5.00¦    573 
+  351. Konya Viktor              1975 Bachenbülach                                                 55.09,1     20.29,9    (367)  C        108.     5.00¦    499 
+  352. Altermatt Manuel          1979 Bachenbülach                                                 55.09,2     20.30,0   (2201)  B        99.      5.00¦    408 
+  353. Eisenring Stefan          1970 Ettenhausen TG            Männerriege Ettenhausen            55.17,1     20.37,9    (263)  C        109.     5.01¦    495 
+  354. Naef Daniel               1968 Buch am Irchel                                               55.20,7     20.41,5   (2094)  C        110.     5.01¦    494 
+  355. Herzog Markus             1959 Zürich                                                       55.23,3     20.44,1    (658)  D        74.      5.02¦    567 
+  356. Passannnate Flavio        1983 Weinfelden                                                   55.29,9     20.50,7    (128)  B        100.     5.02¦    398 
+  357. Adel Andries              1974 Dietlikon                                                    55.30,3     20.51,1   (2002)  C        111.     5.02¦    490 
+  358. Huber Hans                1956 Winterthur                                                   55.42,6     21.03,4    (116)  D        75.      5.03¦    559 
+  359. Balmer Hanspeter          1962 Männedorf                 LC Meilen                          55.44,7     21.05,5   (2260)  D        76.      5.04¦    558 
+  360. Saxer Peter               1965 Kleindöttingen            Klingnauer Stauseeläufer           55.44,8     21.05,6    (332)  D        77.      5.04¦    558 
+  361. Casutt Roberto            1953 Grafstal                                                     55.45,3     21.06,1   (2229)  E        29.      5.04¦    686 
+  362. Schibig Viktor            1948 Illnau                    smrun                              55.49,4     21.10,2     (30)  E        30.      5.04¦    685 
+  363. Jud Markus                1958 Zürich                    LT Greifensee                      55.50,0     21.10,8   (2071)  D        78.      5.04¦    555 
+  364. Zuzolo Vincenzo           1967 Siebnen                   joggerträff pfäffikon              56.00,4     21.21,2   (2250)  C        112.     5.05¦    476 
+  365. Knaus Markus              1965 Winterthur                                                   56.00,6     21.21,4    (689)  D        79.      5.05¦    551 
+  366. Beck Simon                1979 Otelfingen                Simon's Running Team               56.09,3     21.30,1   (2015)  B        101.     5.06¦    379 
+  367. Staub Hans Peter          1955 Fehraltorf                                                   56.16,1     21.36,9    (602)  E        31.      5.06¦    674 
+  368. Binder Peter              1956 Zürich                    cityrunning.ch                     56.19,6     21.40,4    (521)  D        80.      5.07¦    543 
+  369. Müller Peter              1961 Frauenfeld                LSV Frauenfeld                     56.21,5     21.42,3   (2283)  D        81.      5.07¦    542 
+  370. Candrian Dominique        1963 Herrliberg                                                   56.22,3     21.43,1   (2030)  D        82.      5.07¦    542 
+  371. Altermatt Patrick         1972 Gossau ZH                 light runners                      56.23,7     21.44,5   (2007)  C        113.     5.07¦    465 
+  372. Comfort Ran               1959 Winterthur                FC Wülflingen                      56.24,8     21.45,6    (478)  D        83.      5.07¦    540 
+  373. Fritschi Karl             1946 Uster                     CDR                                56.26,9     21.47,7    (264)  E        32.      5.07¦    670 
+  374. Schenker Rafael           1981 Brüttisellen                                                 56.27,2     21.48,0    (453)  B        102.     5.07¦    370 
+  375. Winkler Adrian            1980 Winterthur                                                   56.28,0     21.48,8    (173)  B        103.     5.08¦    370 
+  376. Balmer Sandy              1972 Eschenbach SG             FC Davos                           56.28,2     21.49,0    (122)  C        114.     5.08¦    463 
+  377. Landolt Bruno             1965 Uster                                                        56.34,9     21.55,7    (165)  D        84.      5.08¦    536 
+  378. Kisdaroczi Matin          1977 Winterthur                                                   56.46,1     22.06,9   (2211)  B        104.     5.09¦    361 
+  379. Devlin Neil               1966 Uster                                                        56.47,4     22.08,2   (2036)  C        115.     5.09¦    455 
+  380. Gränicher Hans Peter      1968 Zürich                                                       56.48,4     22.09,2   (2285)  C        116.     5.09¦    454 
+  381. Just Martin               1974 Elgg                                                         56.49,0     22.09,8   (2328)  C        117.     5.09¦    454 
+  382. Widmann Albert            1966 Winterthur                                                   56.50,2     22.11,0    (389)  C        118.     5.10¦    453 
+  383. Willborn Patrick          1976 Winterthur                finishers winterthur               56.50,7     22.11,5    (120)  B        105.     5.10¦    359 
+  384. Alonso Javier             1968 Wängi                                                        57.01,8     22.22,6    (115)  C        119.     5.11¦    448 
+  385. Obi Michel                1983 Dorf                                                         57.07,8     22.28,6     (55)  B        106.     5.11¦    351 
+  386. Berger Hanspeter          1954 Höri                                                         57.09,7     22.30,5   (2292)  E        33.      5.11¦    653 
+  387. Rashiti Faruk             1975 Dübendorf                                                    57.12,7     22.33,5    (265)  C        120.     5.12¦    443 
+  388. Borer Thomas              1957 Zürich                    Panda Experience                   57.14,3     22.35,1   (2019)  D        85.      5.12¦    519 
+  389. Elmaleh Nadav             1961 Fehraltorf                UBS Laufclub                       57.16,2     22.37,0    (283)  D        86.      5.12¦    518 
+  390. Wyss Peter                1958 Winterthur                                                   57.17,1     22.37,9   (2239)  D        87.      5.12¦    518 
+  391. Frischknecht Daniel       1966 Frauenfeld                LSV Frauenfeld                     57.32,3     22.53,1    (480)  C        121.     5.13¦    434 
+  392. Matter Markus             1983 Oftringen                                                    57.34,2     22.55,0    (571)  B        107.     5.14¦    338 
+  393. Dilge Garbis              1963 Zürich                                                       57.34,4     22.55,2   (2301)  D        88.      5.14¦    510 
+  394. Thiele Andreas            1963 Uster                                                        57.46,2     23.07,0   (2321)  D        89.      5.15¦    505 
+  395. Nöthiger Thomas           1971 Tagelswangen                                                 57.46,8     23.07,6    (113)  C        122.     5.15¦    428 
+  396. Endres Cornelius          1976 Dinhard                                                      58.03,7     23.24,5    (341)  B        108.     5.16¦    324 
+  397. von Siebenthal Roman      1969 Winterthur                                                   58.21,3     23.42,1     (37)  C        123.     5.18¦    412 
+  398. Ryser Thomas              ???? Hüntwangen                                                   58.21,9     23.42,7   (2168)  B        109.     5.18¦    315 
+  399. Andrist Bernhard          1946 Zürich                    smrun                              58.24,3     23.45,1    (351)  E        34.      5.18¦    624 
+  400. Murtaj Hamdi              1982 Dübendorf                                                    58.33,1     23.53,9    (727)  B        110.     5.19¦    310 
+  401. Müller Christian          1976 Seuzach                                                      58.34,0     23.54,8   (2244)  B        111.     5.19¦    309 
+  402. Oetiker Hansruedi         1947 Zürich                                                       58.34,3     23.55,1   (2099)  E        35.      5.19¦    620 
+  403. Büsser Othmar             1968 Eschenbach SG             SC Diemberg                        58.42,5     24.03,3   (2235)  C        124.     5.20¦    402 
+  404. Priest Barry              1970 Zürich                    Credit Suisse                      58.45,2     24.06,0    (145)  C        125.     5.20¦    401 
+  405. Mühlbachler Steve         1979 Rickenbach ZH             Swiss V-Boarders                   58.46,0     24.06,8   (2090)  B        112.     5.20¦    304 
+  406. Hirschi Christian         1945 Winterthur                smrun                              58.56,9     24.17,7     (92)  Y        4.       5.21¦    808 
+  407. Frei Werner               1951 Egg b. Zürich             Sportverein Zürich-Wiedikon        59.05,9     24.26,7   (2280)  E        36.      5.22¦    608 
+  408. Henning Patrick           1966 Horgen                                                       59.12,9     24.33,7    (552)  C        126.     5.22¦    389 
+  409. Ramp Jakob                1950 Winterthur                                                   59.18,4     24.39,2   (2256)  E        37.      5.23¦    603 
+  410. Leserf Gottlieb           1938 Uster                     LC Uster / smrun                   59.18,6     24.39,4    (440)  Y        5.       5.23¦    801 
+  411. Bühler Alfred             1946 Elgg                                                         59.23,2     24.44,0   (2316)  E        38.      5.23¦    601 
+  412. Lanz Peter                1961 Unterengstringen          UBS Laufclub                       59.23,8     24.44,6    (134)  D        90.      5.23¦    463 
+  413. Honold-Fontana Daniel     1974 Winterthur                                                   59.30,6     24.51,4    (278)  C        127.     5.24¦    381 
+  414. Voigt Henning             1978 Winterthur                                                   59.40,1     25.00,9   (2215)  B        113.     5.25¦    278 
+  415. Lazzeri Carlo             1963 Steinmaur                                                    59.40,2     25.01,0    (222)  D        91.      5.25¦    456 
+  416. Pérez Cristian            1987 Lachen SZ                                                    59.43,5     25.04,3    (345)  A        42.      5.25¦    316 
+  417. Schürch Thomas            1969 Mönchaltorf               LC Uster                           59.48,9     25.09,7   (2275)  C        128.     5.26¦    372 
+  418. Neuhaus Simon             1953 Winterthur                                                   59.51,4     25.12,2   (2095)  E        39.      5.26¦    590 
+  419. Buzzi Andreas             1962 Stallikon                 BestAge                            59.56,5     25.17,3   (2322)  D        92.      5.26¦    449 
+  420. Casto Vittorio            1969 Fällanden                 Le Tartarughe                      59.57,2     25.18,0     (48)  C        129.     5.27¦    368 
+  421. Lutz Hansjörg             1953 Glattfelden               smrun                            1:00.01,9     25.22,7    (234)  E        40.      5.27¦    586 
+  422. Niedermann Roland         1962 Kefikon TG                                                 1:00.06,5     25.27,3    (750)  D        93.      5.27¦    445 
+  423. Angst Michael             1988 Glattfelden                                                1:00.10,9     25.31,7   (2261)  A        43.      5.28¦    304 
+  423. Pfister Rolf              1957 Pfaffhausen                                                1:00.10,9     25.31,7    (466)  D        94.      5.28¦    443 
+  425. Rahm Thomas               1981 Wetzikon ZH                                                1:00.11,7     25.32,5    (667)  B        114.     5.28¦    262 
+  426. Holst Christian           1977 Wetzikon ZH                                                1:00.30,9     25.51,7     (54)  B        115.     5.30¦    253 
+  427. Anderegg Markus           1959 Winterthur                                                 1:00.33,1     25.53,9   (2011)  D        95.      5.30¦    433 
+  428. Broder Richard            1958 Winterthur                                                 1:00.34,1     25.54,9    (154)  D        96.      5.30¦    433 
+  429. Lippuner Christoph        1966 Frauenfeld                LSV Frauenfeld                   1:00.38,1     25.58,9    (724)  C        130.     5.30¦    350 
+  430. Schneider Martin          1970 Attikon                   TV Flaach                        1:00.40,3     26.01,1   (2324)  C        131.     5.30¦    349 
+  431. Manser Hansjörg           1958 Rutschwil-Dägerlen                                         1:00.41,5     26.02,3    (176)  D        97.      5.31¦    430 
+  432. Haldemann Daniel          1964 Elgg                                                       1:00.45,9     26.06,7    (656)  D        98.      5.31¦    428 
+  433. Portmann Hans-Peter       1952 Zürich                                                     1:00.50,4     26.11,2   (2308)  E        41.      5.31¦    567 
+  434. Egger Hans Peter          1954 Hüntwangen                happy_motion.ch                  1:00.58,8     26.19,6   (2169)  E        42.      5.32¦    563 
+  435. Hürzeler Markus           1953 Effretikon                smrun                            1:00.59,8     26.20,6     (63)  E        43.      5.32¦    563 
+  436. Ritter Richard            1975 Winterthur                                                 1:01.13,7     26.34,5   (2151)  C        132.     5.33¦    334 
+  437. Frey Michael              1973 Rickenbach Sulz                                            1:01.19,2     26.40,0   (2045)  C        133.     5.34¦    331 
+  438. Kull Walter               1952 Winterthur                Finishers Winterthur             1:01.31,7     26.52,5   (2076)  E        44.      5.35¦    550 
+  439. Heckendorn Felix          1965 Oberglatt ZH                                               1:01.51,6     27.12,4    (715)  D        99.      5.37¦    400 
+  440. Karlen Werner             1967 Embrach                                                    1:02.00,1     27.20,9   (2298)  C        134.     5.38¦    313 
+  441. Frick Ruedi               1952 Zürich                                                     1:02.07,3     27.28,1    (469)  E        45.      5.38¦    536 
+  442. Strässle Markus           1946 Wallisellen                                                1:02.16,7     27.37,5   (2315)  E        46.      5.39¦    533 
+  443. Voswinkel Philipp         1975 Kilchberg ZH              Team Lightning Strike            1:02.27,9     27.48,7   (2139)  C        135.     5.40¦    300 
+  444. Hesse Rainer              1945 Hettlingen                LG Hettlingen                    1:02.29,0     27.49,8    (294)  Y        6.       5.40¦    737 
+  445. Bärtschi Ueli             1957 Winterthur                                                 1:02.35,5     27.56,3    (296)  D        100.     5.41¦    381 
+  446. Gruber Reto               1968 Elgg                                                       1:02.58,6     28.19,4    (484)  C        136.     5.43¦    286 
+  447. Zwidler Markus            1974 Winterthur                                                 1:03.18,6     28.39,4   (2209)  C        137.     5.45¦    277 
+  448. Rohr Guido                1958 Pfäffikon ZH                                               1:03.24,5     28.45,3     (33)  D        101.     5.45¦    360 
+  449. Carpentieri Gianluca      1965 Zürich                                                     1:03.39,6     29.00,4   (2031)  D        102.     5.47¦    353 
+  450. Sumi Arthur               1953 Wigoltingen               Run Fit Thurgau                  1:03.52,4     29.13,2    (642)  E        47.      5.48¦    495 
+  451. Strupler Willi            1943 Winterthur                                                 1:04.01,4     29.22,2    (382)  Y        7.       5.49¦    706 
+  452. Nardon Marcel             1975 Adetswil                                                   1:04.09,7     29.30,5    (463)  C        138.     5.49¦    254 
+  453. Baumann Heinz             1955 Dübendorf                                                  1:04.16,6     29.37,4    (680)  E        48.      5.50¦    486 
+  454. Drescher Henrik           1979 Binz                                                       1:04.23,7     29.44,5    (707)  B        116.     5.51¦    141 
+  455. Weilenmann Gerhard        1968 Buch am Irchel            TV Buch                          1:04.49,1     30.09,9     (87)  C        139.     5.53¦    236 
+  456. Dell'Ava Marco            1968 Volketswil                                                 1:04.51,9     30.12,7   (2034)  C        140.     5.53¦    235 
+  457. Baumgartner Urs           1961 Grafstal                                                   1:05.05,3     30.26,1    (203)  D        103.     5.55¦    316 
+  458. Spichiger Armin Armand    1942 Bassersdorf                                                1:05.26,7     30.47,5    (180)  Y        8.       5.56¦    677 
+  459. Lauffenburger Mischa      1986 Nürensdorf                Wingtsun Running                 1:05.29,4     30.50,2   (2252)  A        44.      5.57¦    154 
+  460. Möckli Hanspeter          1942 Schaffhausen              LWS Schaffhausen                 1:05.46,2     31.07,0   (2310)  Y        9.       5.58¦    670 
+  461. Gubler Heinz              1953 Faulensee                                                  1:06.14,5     31.35,3   (2060)  E        49.      6.01¦    439 
+  462. Seger Holger              1970 Herrliberg                                                 1:06.35,7     31.56,5    (598)  C        141.     6.03¦    188 
+  463. Kotz Josef                1949 Rüti ZH                                                    1:06.41,6     32.02,4    (156)  E        50.      6.03¦    429 
+  464. Nelson William            1958 Winterthur                                                 1:06.56,1     32.16,9    (330)  D        104.     6.05¦    268 
+  465. Steiger Michael           1984 Attikon                                                    1:07.02,9     32.23,7   (2128)  B        117.     6.05¦     65 
+  466. Schumann René             1959 Kollbrunn                                                  1:07.30,8     32.51,6   (2206)  D        105.     6.08¦    253 
+  467. Schwender Peter           1965 Nürensdorf                Thurgi's Running Group           1:07.40,4     33.01,2    (255)  D        106.     6.09¦    249 
+  468. Widmer Paul               1939 Effretikon                smrun                            1:08.20,1     33.40,9    (324)  Y        10.      6.12¦    618 
+  469. Kuhn Manfred              1951 Uhwiesen                                                   1:08.36,0     33.56,8    (102)  E        51.      6.14¦    384 
+  470. Oehninger Ernst           1936 Watt                                                       1:08.49,1     34.09,9    (508)  Y        11.      6.15¦    609 
+  471. Fuchs Alex                1968 Zürich                                                     1:08.55,4     34.16,2    (628)  C        142.     6.15¦    124 
+  472. Bühler Daniel             1962 Winterthur                                                 1:09.00,9     34.21,7   (2026)  D        107.     6.16¦    215 
+  473. Müller Hansruedi          1959 Rudolfingen                                                1:09.11,3     34.32,1   (2326)  D        108.     6.17¦    210 
+  474. Habegger Andreas          1968 Fällanden                                                  1:10.22,1     35.42,9    (629)  C        143.     6.23¦     85 
+  475. Scholz Lothar             1953 Tägerwilen                                                 1:10.27,3     35.48,1     (42)  E        52.      6.24¦    340 
+  476. Appmeier Uwe              1966 Zürich                                                     1:10.46,4     36.07,2    (110)  C        144.     6.26¦     74 
+  477. Nijboer Hannes            1962 Illnau                    TG Hütten Masters                1:10.53,9     36.14,7    (729)  D        109.     6.26¦    166 
+  478. Düggelin Robert           1955 Männedorf                 smrun                            1:11.39,6     37.00,4    (400)  E        53.      6.30¦    312 
+  479. Borer Egon                1937 Sissach                   smrun                            1:13.12,4     38.33,2   (2263)  Y        12.      6.39¦    520 
+  480. Reck Tommy                1971 Hinteregg                                                  1:13.21,4     38.42,2   (2107)  C        145.     6.40¦      4 
+  481. Iten Johannes             1965 Winterthur                                                 1:13.34,3     38.55,1    (688)  D        110.     6.41¦     97 
+  482. Weidmann Mike             1995 Zürich                                                     1:13.43,5     39.04,3   (2140)  A        45.      6.42¦      1 
+  483. Nivola Gianpaolo          1966 Luzern Reussbühl          TV Mauritius Emmen / smrun       1:14.14,8     39.35,6   (2224)  C        146.     6.44¦      1 
+  484. Kutil Erwin               1969 Winterthur                                                 1:15.19,9     40.40,7    (451)  C        147.     6.50¦      1 
+  485. Schmid Jakob              1952 Tägerwilen                Run Fit Thurgau                  1:15.36,6     40.57,4    (454)  E        54.      6.52¦    219 
+  486. Lüke Christoph            1974 Wetzikon ZH                                                1:16.42,3     42.03,1   (2083)  C        148.     6.58¦      1 
+  487. Limberg Klaus             1961 Winterthur                                                 1:21.22,5     46.43,3   (2173)  D        111.     7.23¦      1 
+  488. Canacik Ahmet             1956 Wetzikon ZH                                                1:24.50,4     50.11,2    (195)  D        112.     7.42¦      1 
+
+

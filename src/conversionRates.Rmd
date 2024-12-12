@@ -1,0 +1,13 @@
+---
+output:
+  html_document:
+    keep_md: yes
+---
+```{r setup, echo = F, message=F}
+require(knitr)
+opts_chunk$set(fig.path = "images/conversionRates-")
+```
+
+How well do drivers convert pole positions or front rows to race wins or podiums? How good a predictor are P3 standings when it comes to achieving pole?
+
+http://www.pinnaclesports.com/en/betting-articles/formula-1/formula-one-betting-drivers-pole-conversion-rates

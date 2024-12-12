@@ -1,0 +1,35 @@
+# Introduction
+
+The aim of this book is to provide you with a hands on guide to analysing and visualising data related to Formula One motor racing using a set of open course data visualisation and analysis tools based on the *R programming environment*.
+
+Whilst R was primarily developed for statistical computing, I shall be using it in a far more pragmatic way: my knowledge and skills relating to statistics are scant at best, but I have found that several of the data visualisation libraries developed for use with R make it very powerful as a flexible data visualisation environment. Most notable of the packages is Hadley Wickham's *ggplot2* library, a superb toolkit for developing what Amanda Cox, denizen of the temple to data journalism that is the New York Times Graphics desk, refers to as *data sketches*: quick visual representations of often messy datasets that give you a quick way in to starting a conversation with the data.
+
+In addition, the joy-to-use *RStudio* integrated development environment provides a well thought out space for developing quick analyses using R and ggplot2. With the addition of two more indispensable libraries - *shiny* for developing interactive applications, and *knitr* for generating output documentation (such as presentations, as well as this book..) - RStudio provides and ideal playground for the recreational, as well as professional, data junkie.
+
+
+## Structure of this book
+
+The first part of this book provides a very quick technical overview of the tools and data sources we will be using the analyse the F1 data:
+
+* RStudio
+* ggplot
+* shiny
+* ergast API
+
+The second part of the book provides a variety of recipes for analysing and visualising Formula One related data. Separate chapters are used to group together recipes by theme:
+
+* Race Weekend
+  * Practice Sessions
+  * Qualifying
+  * Race
+* Season Review
+  * Drivers
+  * Teams
+  * Races
+* Historical Review
+
+## How this book was put together
+
+This book was published using Leanpub ( http://leanpub.com ) using a workflow based around *RStudio* and *knitr* (http://yihui.name/knitr/).
+
+

@@ -1,0 +1,10 @@
+---
+output:
+  html_document:
+    keep_md: yes
+---
+```{r setup, echo = F, message=F}
+require(knitr)
+opts_chunk$set(fig.path = "images/part4-")
+```
+-# Part 4 - Weekend Summaries

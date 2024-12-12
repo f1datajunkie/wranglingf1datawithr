@@ -1,0 +1,28 @@
+# Foreword
+
+For several years I've spent Formula One race weekends dabbling with F1 data, posting the occasional review on the F1DataJunkie website (*f1datajunkie.com*). If the teams can produce updates to their cars on a fortnightly or even weekly basis, I thought I should be able to push my own understanding of data analysis and visualisation at least a little way over the one hour TV prequel to each qualifying session and in the run up to each race.
+
+This book represents a review of some of those race weekend experiments. Using a range of data sources, I hope to show how we can use powerful, and freely available, data analysis and visualisation tools to pull out some of the stories hidden in the data that may not always be reported.
+
+Along the way, I hope to inspire you to try out some of the techniques for yourself, as well as developing new ones. And in much the same way that Formula One teams pride themselves in developing technologies and techniques that can be used outside of F1, you may find that some of the tools and techniques that I'll introduce in these pages may be useful to you in your own activities away from F1 fandom. If they are, let me know, and maybe we can pull the ideas together in an *#F1datajunkie spinoffs* book!
+
+Indeed, the desire to learn plays a significant part on my own #f1datajunkie activities. Formula One provides a context, and authentic, real world data sets, for exploring new-to-me data analysis and visualisation techniques that I may be able to apply elsewhere. The pace of change of F1 drives me to try new things out each weekend, building on what I have learned already. But at the end of the day, if any of my dabblings don't work out, or I get an analysis wrong, it doesn't matter so much: after all, this is just recreational data play, a conversation with the data where I can pose questions and get straightforward answers back, and hopefully learn something along the way.
+
+## A Note on the Data Sources
+
+Throughout this book, I'll be drawing on a range of data sources. Where the data is openly licensed, such as the *ergast* motor racing results API (*http://ergast.com*) maintained by Chris Newell, I will point you to places where you can access it directly. For the copyrighted data, an element of subterfuge may be required: I can tell you how to grab the data, but I can't share a copy of it with you. On occasion, I may take exception to this rule and point you to an archival copy of the data I have made available for the purpose of reporting, personal research and and/or criticism.
+
+To make it easier to get started working with the datasets, I have put together a set of *f1datajunkie* Docker containers that together make up a lightweight virtual machine that contains all you need to get started analysing and visualising the data. In addition, source code for many of the analyses contained within this book can be found in the *f1datajunkie* Github repository.
+
+Source code - and data sets (as *.sqlite* files) - are available from:
+
+*https://github.com/psychemedia/wranglingf1datawithr/tree/master/src*
+
+Note that the contents of this repository may lag the contents of this book quite significantly.
+
+## The Lean and Live Nature of This Book
+This book was originally published using *Leanpub* (*leanpub.com*), a “lean book production” website that allows books to be published as they are being written. This reduced the production time and allowed the book to be published in an incremental way and allows any errors that are identified to be corrected as soon as they are spotted; purchasers of the the book on the Leanpub site get access to updates of the book, as they are posted, for no additional cost.
+
+This book has also generated been generated from a “live document” in the sense that much of the content was generated automatically *from code*. All the data tables and charts that appear in the book (and even some example text statements) were created by the code that directly precedes the tables and charts in the pages that follow.
+
+But enough of the background… it’s time to begin…

@@ -1,0 +1,37 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+# Chart Descriptions
+
+A simple set of tools to extract infromation from a ggplot chart object
+
+
+```{r}
+library(ggplot2)
+g=ggplot(economics_long, aes(date, value01, colour = variable)) + geom_line()+ggtitle('dummy title')
+
+#The label values may not be the limts
+txt=paste('The chart titled"', g$labels$title,'"',
+          'with x-axis', g$labels$x,'labeled from',ggplot_build(g)$panel$ranges[[1]]$x.labels[1],'to',tail(ggplot_build(g)$panel$ranges[[1]]$x.labels,n=1),
+          'and y-axis', g$labels$y,'labeled from',ggplot_build(g)$panel$ranges[[1]]$y.labels[1],'to',tail(ggplot_build(g)$panel$ranges[[1]]$y.labels,n=1),sep=' ')
+if ('colour' %in% attributes(g$labels)$names){
+  txt=paste(txt,'Colour is used to represent',g$labels$colour)
+  
+  if ( class(g$data[[g$labels$colour]]) =='factor') {
+    txt=paste(txt,', a factor with levels: ',
+              paste(levels(g$data[['variable']]), collapse=', '), '.', sep='')
+  }
+}
+
+txt
+```
+
+
+ggplot_build(g)
+
+str(g)
+
+
+if ( class(g$data[['variable']]) =='factor') print(levels(g$data[['variable']]))

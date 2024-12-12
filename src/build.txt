@@ -1,0 +1,9 @@
+library(knitr)
+
+#ls chapter-*.Rmd
+
+l=c("chapter-battlemaps.Rmd","chapter-introRdataframes.Rmd","chapter-bibliography.Rmd","chapter-lapchart.Rmd","chapter-careerTrajectory.Rmd","chapter-lapsled.Rmd","chapter-championshipracecharts.Rmd","chapter-pitStops.Rmd","chapter-churn.Rmd","chapter-pointsPerformanceCharts.Rmd","chapter-conclusion.Rmd","chapter-practice.Rmd","chapter-endofseasonshowdown.Rmd","chapter-practiceUtilisation.Rmd","chapter-ergast-data-db.Rmd","chapter-quali.Rmd","chapter-ergast-data.Rmd","chapter-qualiUtil.Rmd","chapter-eventDetection.Rmd","chapter-raceHistoryChart.Rmd","chapter-f1comdata.Rmd","chapter-sectorTimes.Rmd","chapter-intraTeamDriverPerf.Rmd","chapter-shinyLaptimeExplorer.Rmd","chapter-intro.Rmd","chapter-streakiness.Rmd")
+
+for (c in l) knit(c)
+
+#cp `ls chapter-*.md` ../manuscript

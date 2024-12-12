@@ -1,0 +1,65 @@
+---
+output:
+  html_document:
+    keep_md: yes
+---
+```{r setup, echo = F, message=F}
+library(knitr)
+opts_chunk$set(fig.path = "images/bestever-")
+```
+
+##
+-----
+FT - Who are the best ever Formula One drivers?
+https://ig.ft.com/sites/the-best-f1-drivers-ever/ John Burn-Murdoch  •  November 29, 2015
+> To assess driver performance we scored every race result according to the 10, 6, 4, 3, 2, 1 system that was in place from 1991 to 2002 (the driver winning a race scores 10 points, second place 6, through to a single point for sixth place).
+> 
+> For cars we applied the same system but exclusively to qualifying, on the basis that this can be considered a purer measure of vehicle performance than the results of a full race, where driver ability, pit stops and other factors have more influence.
+> 
+> We then calculated the percentage of all available points throughout the season that a driver or team won, and scaled them from 0 to 100, where 0 means no points scored, and 100 means a team or driver won the largest ever share of points since the sport began (Michael Schumacher’s 2002 drive and the 1952 Ferrari each score 100).
+
+also:
+Methodology detail
+
+The 20 most successful drivers were selected based on the proportion of races they started that they went on to win. Räikkönen, Rosberg, Button, Massa, Webber and Ricciardo were then added to this group to allow for more head-to-head comparisons between current drivers.
+
+For each of the resulting group of 26, we took every race a driver started, and recorded two pieces of information:
+
+The number of points scored by the driver in the race itself (10 for a race win, 6 for second, 4 for third, 3 for fourth, 2 for fifth and 1 for sixth)
+The total number of points scored by the driver’s team in qualifying (10 points for a car on pole position, 6 for second and so on)
+We then summed each of these numbers by year, and divided the result by the total number of points available across that season as a whole, to give the share of all points won by a driver or team, i.e a measure of their dominance of the field.
+
+These raw dominance scores were then scaled from 0 to 100, with 0 indicating a team or driver scoring no points using the scoring method described above, and 100 indicating the highest share of points won across all 281 seasons in the complete dataset.
+
+In the charts above, the “10% most dominant seasons” labels and the references to all time ranks refer to a given score relative to all 281 seasons in the dataset.
+
+
+----end FT
+
+
+
+
+
+---
+https://f1metrics.wordpress.com/2015/08/21/a-reconstructed-history-of-formula-1/
+A RECONSTRUCTED HISTORY OF FORMULA 1 Andrew Phillips
+
+August 21, 2015
+---
+
+---
+THE MOST DOMINANT TEAMS IN F1 HISTORY
+
+October 8, 201
+https://f1metrics.wordpress.com/2015/10/08/the-most-dominant-teams-in-f1-history/
+
+----
+
+
+
+
+##BBC analysis
+http://www.bbc.co.uk/sport/0/formula1/26464195
+
+#F1 grandprix
+http://f1-grandprix.com/?page_id=3256

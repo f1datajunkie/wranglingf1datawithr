@@ -1,0 +1,247 @@
+---
+title: "Untitled"
+output: html_document
+---
+```{r setup, echo = F, message=F}
+library(knitr)
+library(knitron)
+opts_chunk$set(engine.path="/Users/ajh59/Anaconda/bin/ipython")
+```
+
+
+```{ipython}
+x=1
+```
+```{ipython}
+print(x+1)
+```
+{ipython}
+
+
+fn='/Users/ajh59/Downloads/q_lap_times_0'
+out_fn='can_qualiClass.csv'
+
+
+
+import pandas
+import lxml.etree
+import pandas as pd
+import os
+
+def loader(fn):
+    cmd = 'pdftohtml -xml -nodrm -zoom 1.5 -enc UTF-8 -noframes %s "%s" "%s"' % (
+        '',fn+'.pdf', os.path.splitext(fn+'.xml')[0])
+    # can't turn off output, so throw away even stderr yeuch
+    cmd + " >/dev/null 2>&1"
+    os.system(cmd)
+    
+    xmldata = open(fn+'.xml','r').read()
+    root = lxml.etree.fromstring(xmldata)
+    pages = list(root)
+    return pages, root
+
+def flatten(el):           
+    result = [ (el.text or "") ]
+    for sel in el:
+        result.append(flatten(sel))
+        result.append(sel.tail or "")
+    return "".join(result)
+
+def laptimes_table(pages):
+    rows=[]
+
+    data=[]
+
+    for page in pages:
+        scraping=False
+        prevrow=0
+        newpair=False
+        for el in page:
+            txt=flatten(el).strip()
+            tmp={'text':txt}
+            if 'left' in el.attrib and el.attrib['left'] is not None:
+                for attr in el.attrib:
+                    tmp[attr]=el.attrib[attr]
+                #print txt, el.attrib
+                rows.append(tmp)
+
+                prevrow=int(el.attrib['top'])
+                if scraping:
+                    if not newpair:
+                        newpair=txt
+                    else:
+                        data.append( (newpair,txt) )
+                        newpair=False
+
+                if not scraping and txt.startswith('FORMULA 1 G'):
+                    scraping=True
+
+    return data,pd.DataFrame.from_records(rows)
+    
+
+pages,root=loader(fn)
+
+data,df=laptimes_table(pages)
+```
+
+
+{ipython}
+def approx(x,y,t=2):
+    if abs(int(x)-int(y))<=t: return True
+    return False
+
+import re
+def quali_class_table(pages):
+    rows=[]
+
+    data=[]
+    top=0
+    left=999
+    tmp=''
+    for page in pages[1:2]:
+        scraping=False
+        for el in page:
+            txt=flatten(el).strip()
+            #print(txt,left,scraping)
+            if scraping and txt.startswith('POLE POSITION'): break #scraping =False
+            if scraping and 'left' in el.attrib and el.attrib['left'] is not None:
+                print(el.attrib['left'])
+                if left<int(el.attrib['left']):
+                    if tmp!='' and tmp.isdigit():
+                        txt='{} {}'.format(tmp,txt)
+                    elif tmp!='':
+                        data.append(tmp)
+                    tmp=''
+                    data.append(txt)
+                elif data!=[]:
+                    rows.append(data)
+                    if len(txt.split(' '))>1:
+                        data=[txt]
+                    else:
+                        tmp=txt
+                        data=[]
+                else:
+                    tmp=txt
+                    #data.append(txt)
+                #if scraping:print txt, el.attrib
+                left=int(el.attrib['left'])
+            if not scraping and txt.startswith('FORMULA 1 '):
+                    scraping=True
+    nn=re.compile(r'^(?P<pos>\d*) (?P<num>\d*) (?P<name>.*)$')
+    rows2=[]
+    for row in rows:
+        #print(row)
+        row2=[]
+        row2.append(nn.match(row[0]).group('pos'))
+        row2.append(nn.match(row[0]).group('num'))
+        row2.append(nn.match(row[0]).group('name'))
+        row2.append(row[1])
+        rows2.append(row2)
+    return rows,rows2
+#rows,rows2=quali_class_table(pages)    
+```
+
+{ipython}
+def _grab_laptimes(data):
+    name=''
+    lap=''
+    times=[]
+    inlaps=False
+    tmp={}
+    earliest=None
+    for pair in data:
+        #print(pair)
+        if pair==('NO','NO'):
+            if 'laps' in tmp: tmp['laps'].pop()
+            number,name=prevpair
+            if tmp!={}: times.append(tmp)
+            tmp={'name':name,'number':number, 'laps':[]}
+        elif pair==('TIME','TIME'):
+            inlaps=True
+        elif inlaps:
+            print(tmp)
+            if earliest is None:
+                earliest=(tmp['name'],pair[1])
+            elif len(tmp['laps'])==0:
+                if earliest[1]>pair[1]:
+                    earliest=(tmp['name'],pair[1])
+            tmp['laps'].append(pair)
+
+        prevpair=pair
+    #Catch tailender
+    if tmp!={}: times.append(tmp)
+    return earliest,times
+  
+earliest,laptimes=_grab_laptimes(data)
+```
+
+{ipython}
+import datetime
+#http://tgs.github.io/nptime/
+from nptime import nptime
+
+def nptimify(t):
+    tt=t.split(':')
+    if len(tt)==3:
+        h=int(tt[0])
+        m=int(tt[1])
+        if len(tt[2].split('.'))==2:
+            s=int(tt[2].split('.')[0])
+            ms=int(tt[2].split('.')[1])
+        else:
+            s=int(t.split(':')[2])
+            ms=0
+    elif len(tt)==2:
+        h=int(tt[0])
+        m=int(tt[1])
+        if len(tt[2].split('.'))==2:
+            s=int(tt[2].split('.')[0])
+            ms=int(tt[2].split('.')[1])
+        else:
+            s=int(t.split(':')[2])
+            ms=0
+    return nptime(h, m, s, ms)
+
+def npreltimify(t,earliest="0:0:0"):
+    return nptimify(t) - nptimify(earliest)
+
+def nprebase(delta,earliest="0:0:0"):
+    return delta + nptimify(earliest)
+
+#def nprebaseElapsed()
+
+#Preferred time format
+def formatTime(t):
+    return float("%.3f" % t)
+# Accept times in the form of hh:mm:ss.ss or mm:ss.ss
+# Return the equivalent number of seconds
+def getTime(ts):
+    t=ts.strip()
+    t=ts.split(':')
+    if len(t)==3:
+        tm=60*int(t[0])+60*int(t[1])+float(t[2])
+    elif len(t)==2:
+        tm=60*int(t[0])+float(t[1])
+    else:
+        tm=float(t[0])
+    return formatTime(tm)
+
+def _get_rebased_laptimes(times,earliest): 
+    rr=[]
+    for driver in times:
+        for lap in driver['laps']:
+            if lap[0].split(' ')[0]=='1':
+                b=nprebase(npreltimify(lap[1],earliest[1])).isoformat()
+            else:
+                b=lap[1]
+            rr.append({'name':driver['name'],
+                       'number':driver['number'],
+                       'lapNumber':lap[0].split(' ')[0],
+                       'pit': True if lap[0].endswith('P') else False,
+                       'laptime':b,
+                       'stime':getTime(b)})
+    return pd.DataFrame(rr)
+    
+ddx=_get_rebased_laptimes(laptimes,earliest)
+ddx.to_csv(out_fn,index=False)
+```

@@ -1,0 +1,45 @@
+---
+output:
+  html_document:
+    keep_md: yes
+---
+```{r setup, echo = F, message=F}
+require(knitr)
+options(knitr.table.format = 'markdown')
+opts_chunk$set(fig.path = "images/compBalance-")
+opts_chunk$set(results = "asis")
+```
+# Competitive Balance
+
+Herfindahl index
+
+Concentration ration - haan-koning-vanwitteloostuijn2008 ?team and player concentrations?
+
+When Going in Circles is Going Backward: Outcome Uncertainty in NASCAR
+Jason P. Berkowitz, Craig A. Depken II and Dennis P. Wilson
+Journal of Sports Economics 2011 12: 253
+
+
+Measuring Competitive Balance in Professional Team Sports Using the Herfindahl-Hirschman Index: A Cautionary Note*
+P. Dorian Owen, Michael Ryan and Clayton R. Weatherston
+
+
+
+
+Estimating the Herfindahl Index from Concentration Ratio Data
+http://www.tandfonline.com/doi/abs/10.1080/01621459.1985.10478112#.VLOcRmSsUwx
+
+http://www.academicjournals.org/article/article1379410863_Chin-shan%20and%20Chia-liang.pdf
+
+
+Schmidt, Martin B., and David J. Berri. "Competitive balance and market size in major league baseball: a response to baseball's blue ribbon panel." Review of Industrial Organization 21, no. 1 (2002): 41-54.
+
+
+Fort, R., & Quirk, J. (1995). Cross-subsidization, incentives, and outcomes in professional team sports leagues. Journal of Economic Literature, 1265-1299.
+http://www.vanderbilt.edu/econ/faculty/Vrooman/fortquirk.pdf
+
+Gini coeff- Schmidt, M. B., & Berri, D. J. (2001). Competitive balance and attendance the case of major league baseball. Journal of Sports Economics, 2(2), 145-167.
+
+
+La Croix, Sumner, and Akihiko Kawaura (1999) ‘Rule Changes and Competitive Balance in Japanese
+Professional Baseball’, Economic Inquiry, 37, 353–368.

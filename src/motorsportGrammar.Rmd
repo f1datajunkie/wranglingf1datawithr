@@ -1,0 +1,14 @@
+output:
+  html_document:
+    keep_md: yes
+---
+```{r setup, echo = F, message=F}
+require(knitr)
+opts_chunk$set(fig.path = "images/lapchart-")
+```
+# Towards A Grammar of Motorsport Results and Timing Data?
+
+As the chart types and results and timing data visualisations have developed through this book, you may have noticed particular recurring ideas or motifs. For example, when reporting on race results, I have tended to use an *italic* font to identify drivers who were not classified in a race; when charting points data, we can make use of a grid aligned to a particular points scheme, and so on.
+
+Trying to come up with a consistent way of *writing* charts means that there should be a correspondingly consistent way way of *reading* them. This is particularly evident when it comes to motorsport timing schemes. In the first part of this chapter, we will review how mototrsport timing screens are conventionally displayed, and try to unpick something of the grammar that underpins them. (In a later chapter we'll review how we can read the timing screens, and how we can try to reveal, or interpret, the stories they may contain within them.) We'll then look at how we might start to develop a grammar around the more general chart and table displays developed throughout this book.
+

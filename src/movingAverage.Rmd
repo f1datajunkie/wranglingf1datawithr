@@ -1,0 +1,155 @@
+---
+output:
+  html_document:
+    keep_md: yes
+---
+```{r setup, echo = F, message=F}
+require(knitr)
+opts_chunk$set(fig.path = "images/movingaverage-")
+```
+# Consistent Performers? 
+
+moving average - measure of consistency
+ 
+
+
+curveball p136
+
+
+```{r message=FALSE}
+require(DBI)
+ergastdb =dbConnect(RSQLite::SQLite(), './ergastdb13.sqlite')
+#Helper function to display database query result as a formatted table
+kdb=function(q){ kable(dbGetQuery(ergastdb,q)) }
+```
+
+
+```{r}
+onetwoFlag=dbGetQuery(ergastdb,
+           'SELECT r.name,r.year,round,constructorRef,
+           CASE WHEN (MAX(res.position)<=2 AND COUNT(res.position)=2) THEN 1 ELSE 0 END AS onetwo
+           FROM results res JOIN races r JOIN constructors c
+           WHERE r.raceId=res.raceId
+           AND c.constructorId=res.constructorId 
+           AND constructorRef="red_bull" 
+           GROUP BY res.raceId,res.constructorid 
+           ORDER BY r.year, round')
+
+kable(head(onetwoFlag))
+```
+
+```{r}
+doublepodiumFlag = dbGetQuery(ergastdb,
+           'SELECT DISTINCT r.name, year, round, constructorRef, 
+              CASE WHEN (COUNT(res.position)=2 and MAX(res.position)<=3) 
+                THEN 1 ELSE 0 END AS doublePodium 
+           FROM results res JOIN races r JOIN constructors c 
+           WHERE r.raceId=res.raceId 
+           AND c.constructorId=res.constructorId 
+           AND constructorRef="red_bull" 
+           GROUP BY res.raceId,res.constructorid 
+           ORDER BY year, round')
+```           
+```{r}
+#y contains a list of result flags
+#val defines polarity
+streaks=function(y,val=0){
+  #Start by initialising run length to 0
+  run=0
+  #Define a list to capture all the runs, in sequence
+  runs=c()
+  #Initialise a variable that contains the previous result
+  prev=y[1]
+  #The last flag identifies the last result as part of a run
+  last=TRUE
+  #Search through each result flag
+  for (i in y) {
+    #Is the current result is the same as the previous one?
+    if (i!=prev) {
+      #If not, record the length of the previous run, and its polarity
+      runs=c(runs,run*(if (prev==val) -1 else 1))
+      #Initialise the next run length
+      run=0
+      #This result is the first in a new run
+      last=FALSE
+    } else {
+      #We are still in a run
+      last=TRUE
+    }
+    #Keep track of what the previous result flag was
+    prev=i
+    #Increase the length of the run counter
+    run=run+1
+  }
+  #If the last result was part of a run, record that run
+  if (last | (run==1)) runs=c(runs,run*(if (prev==val) -1 else 1))
+  #Create a dataframe from run list
+  ss=data.frame(l=runs)
+  #Tally how many results in total have been counted after each run
+  #That is, record the result number for the last result in each run
+  ss$end=cumsum(abs(ss$l))
+  #Identify the result number for the start of each run
+  ss$start=ss$end-abs(ss$l)+1
+  #Reorder the columns
+  ss[,c("start","end","l")]
+}
+```
+
+
+```{r}
+streakReview=function(driverRef,years='',length=5,typ=2,mode='podium',topN=''){
+  #The definitions are a bit messy...
+  #If we set a topN parameter, force the topN mode
+  if (topN!='') mode='topN'
+  
+  #Get the driver details
+  driver=getDriver(driverRef,years)
+  
+  #Calculate the desired 0/1 stream based on the mode property
+  if (mode=='podium') driver$mode=mapply(podium,driver$position)
+  else if (mode=='frontrow') driver$mode=mapply(frontrow,driver$grid)
+  else if (mode=='topN') driver$mode=mapply(topNfinish,driver$position,topN)
+  else if (mode=='unclassified') driver$mode=mapply(unclassified,driver$position)
+  else if (mode=='inpoints') driver$mode=mapply(inpoints,driver$points)
+  else return(data.frame())
+  
+  #Calculate the streaks in the desired mode property
+  streak=streaks(driver$mode)
+  
+  #Annotate the streak with start (first), end (last) and broken-by information
+  streak$startc= mapply(function(x) driver[x,'name'],streak$start) 
+  streak$endc= mapply(function(x) driver[x,'name'],streak$end) 
+  streak$starty= mapply(function(x) driver[x,'year'],streak$start) 
+  streak$endy= mapply(function(x) driver[x,'year'],streak$end)
+  nd=nrow(driver)
+  streak$brokenbyy=mapply(function(x) if (nd<x+1) NA else driver[x+1,'year'],
+                          streak$end)
+  streak$brokenbyc= mapply(function(x) if (nd<x+1) NA else driver[x+1,'name'],
+                           streak$end)
+  
+  #The typ argument lets us get all streaks, 1s streaks, or 0s streaks
+  #greater than or equal to a specified length 
+  if (typ==2) streak[abs(streak["l"])>=length,]
+  else if (typ==1) streak[abs(streak["l"])>=length & streak["l"]>0,]
+  else streak[abs(streak["l"])>=length & streak["l"]<0,]
+}
+```
+
+stre
+
+require(zoo)
+alonso=getDriver('alonso')
+#If a driver isn't classified, set their position at 25 as a penalty
+alonso$position[is.na(alonso$position)] = 25
+rollmean(alonso$position,3)
+
+#We can also do rolling means for the points
+rollmean(vettel$points,3)
+
+
+
+#ma=function(x,n=5){filter(x,rep(1/n,n), sides=1)}
+##sides=1 past only, sides=2 past and future
+# ma(alonso$position)
+ ```
+ 

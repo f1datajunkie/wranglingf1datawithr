@@ -1,0 +1,103 @@
+
+
+
+do some processing of stints
+
+
+q=paste('SELECT driverRef as driverId, l.driverId AS driverId, d.code AS code, lap, position , 1.0*milliseconds/1000 as rawtime
+           FROM lapTimes l JOIN drivers d JOIN races r
+           ON l.driverId=d.driverId AND l.raceId=r.raceId
+           WHERE year=',year,' AND round="',round,'"',sep='')
+l2=dbGetQuery(ergastdb,q)
+
+q1=paste('SELECT driverRef as driverId, lap, duration as rawduration
+          FROM pitStops p JOIN drivers d JOIN races r
+          ON p.driverId=d.driverId AND p.raceId=r.raceId
+          WHERE r.year=',year,' AND r.round="',round,'"',sep='')
+p2=dbGetQuery(ergastdb,q1)
+
+l2=lapsData.df(2016,2)
+p2=pitsData.df(2016,2)
+
+l3=merge(l2,p2,by=c('driverId','lap'),all=T)
+
+l3=merge(l2,p2[,c('driverId','lap','rawduration')],by=c('driverId','lap'),all=T)
+l3['inlap']=!is.na(l3['rawduration'])
+l3=ddply(l3,.(driverId),transform,outlap=c(T,!is.na(head(rawduration,-1))))
+#stint
+l3=arrange(l3,driverId, -lap)
+l3=ddply(l3,.(driverId),transform,stint=1+sum(inlap)-cumsum(inlap))
+l3=arrange(l3,driverId, lap)
+l3=ddply(l3,.(driverId,stint),transform,lapInStint=1:length(stint))
+l3=arrange(l3,driverId, lap)
+
+#get purple and green
+l3=arrange(l3,driverId,lap)
+l3=ddply(l3,.(driverId),transform,cuml=cumsum(rawtime),driverbest=cummin(c(9999,laptime[2:length(laptime)])))
+l3=arrange(l3,cuml)
+l3['purple']=sapply(l3['driverbest'],cummin)
+l3['col']=ifelse(l3['rawtime']==l3['purple'],'purple',ifelse(l3['laptime']==l3['driverbest'],'green','black'))
+
+#l4 and l5 are used to give a summary of racing laptimes
+l4=l3[!l3['outlap'] & !l3['inlap'],]
+l5=ddply(l4,.(driverId,stint),summarise,stintav=sum(rawtime)/length(rawtime),stintsum=sum(rawtime),stintlen=length(rawtime))
+ 
+ #fuel effect is actually rawtime-(MAXLAPS-lap)*0.083
+ MAXLAPS=max(l4['lap'])
+FUEL_PENALTY =0.083
+ .e = environment()
+ g=ggplot(l4,aes(x=lapInStint,y=rawtime-(MAXLAPS-lap)*FUEL_PENALTY,col=factor(stint)),environment=.e)
+ g+geom_line()+facet_wrap(~driverId)
+ 
+ 
+ g+ geom_smooth(method = "lm", formula = y ~ x)+facet_wrap(~driverId)
+ 
+ fuel effect=0.08s per lap
+ 
+ ??amortise the cost of a pitstop over the following stint
+ ??amortise the cost of a pitsop over the stint that led up to it
+----
+2=dbGetQuery(f1,"SELECT sum(duration)/count(duration) av,min(duration) min,r.circuitId,r.name FROM pitStops o JOIN races r WHERE o.raceId=r.raceId GROUP BY r.circuitId")
+> ps2$d=ps2$min-ps2$av
+
+
+**Footnote When in-race refuelling was still allowed, race time simulations also had to take into account the time penalties associated from running cars with heavier fuel loads: typically, each additionaly kilogram of fuel added of the order ???s to the laptime (for example, depending on circuit length), so teams were faced with a range of trade offs:
+
+- lighter cars run faster so you want to run more stints with fewer laps in each stint;
+- more stints require more pitstops; as each pitstop has a pit loss time penalty associated with it you want to minimse the number of pitstops;
+- fresher tyres tend to run faster than degraded ones - the longer the stint, the more the tyre degrades and the more performance suffers;
+- for tyres that have completed more than a certain number of lap, their continued perfomance may fall off very quickly;
+- tyres may behave differently depending on the mass of the car (and hence fuel load).
+For an example of how run race simulations based around choosing optimal fuel strategies, see ??? mclaren RAeng
+
+
+
+
+
+race.plot.pits.teamDistribution=function(.racePits){
+  g=ggplot(.racePits)+geom_boxplot(aes(x=team,y=pitTime))
+  g=g+ggtitle(mktitle(paste(event,"Race - Pit Stop distribution by team")))+xlab("Lap")
+  g=g+ylab("Pit time (s)")
+  g=xRot(g,7)
+  g=g+theme(legend.position="none")
+  g
+}
+
+race.plot.pits.DeltaFromOverallBest=function(.racePits){
+  g=ggplot(.racePits)+geom_bar(aes(x=TLID,y=pdelta),stat="identity")
+  g=g+facet_wrap(~stops)
+  g=xRot(g,7)
+  g=g+ggtitle(mktitle(paste(event,"Race - Pit Stop Deltas from Overall Best Pit")))
+  g=g+ylab("Pit Deltas (s)")
+  g
+}
+
+race.plot.pits.DeltaFromOverallBest2=function(.racePits){
+  g=ggplot(.racePits)+geom_bar(aes(x=TLID,y=pdelta,fill=factor(stops)),stat="identity")
+  g=xRot(g)
+  g=g+guides(fill=guide_legend(title="Stop"))
+  g=g+ggtitle(mktitle(paste(event,"Race - Pit Stop Deltas from Overall Best Pit")))
+  g=g+ylab("Cumulative Pit Deltas (s)")
+  g
+}
+

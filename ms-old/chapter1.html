@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=9" >
+
+<title>Chapter One - The Tools We&#39;re Working With</title>
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 12px;
+   margin: 8px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 { 
+   font-size:2.2em; 
+}
+
+h2 { 
+   font-size:1.8em; 
+}
+
+h3 { 
+   font-size:1.4em; 
+}
+
+h4 { 
+   font-size:1.0em; 
+}
+
+h5 { 
+   font-size:0.9em; 
+}
+
+h6 { 
+   font-size:0.8em; 
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre {	
+   margin-top: 0;
+   max-width: 95%;
+   border: 1px solid #ccc;
+   white-space: pre-wrap;
+}
+
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code.r, code.cpp {
+   background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * { 
+      background: transparent !important; 
+      color: black !important; 
+      filter:none !important; 
+      -ms-filter: none !important; 
+   }
+
+   body { 
+      font-size:12pt; 
+      max-width:100%; 
+   }
+       
+   a, a:visited { 
+      text-decoration: underline; 
+   }
+
+   hr { 
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote { 
+      padding-right: 1em; 
+      page-break-inside: avoid; 
+   }
+
+   tr, img { 
+      page-break-inside: avoid; 
+   }
+
+   img { 
+      max-width: 100% !important; 
+   }
+
+   @page :left { 
+      margin: 15mm 20mm 15mm 10mm; 
+   }
+     
+   @page :right { 
+      margin: 15mm 10mm 15mm 20mm; 
+   }
+
+   p, h2, h3 { 
+      orphans: 3; widows: 3; 
+   }
+
+   h2, h3 { 
+      page-break-after: avoid; 
+   }
+}
+
+</style>
+
+
+
+
+
+</head>
+
+<body>
+<h1>Chapter One - The Tools We&#39;re Working With</h1>
+
+<h2>Preamble</h2>
+
+<p>As a hands-on guide, one of my main aims in producing this book was to encourage you to start working with Formula One data yourself using a range of free, open source tools and, wherever possible, openly licensed data.</p>
+
+<p>As far as the data analysis and visualisation tools go, I wanted to choose an approach that would allow you to …</p>
+
+<p>A programming/data analysis language that would allow you to manipulate data relatively easily - ingesting it from whatever data source we might be using (a downloaded file, an online API, or a database management system); an integrated development environment that would let you develop your own analyses in an interactive fashion, allowing you to see graphical results alongside any code used to generate them, as well as a way of easily previewing the data you were working with.</p>
+
+<p>There were two main options that … R/RStudio/ggplot2  and python/ipython notebook/matplotlib</p>
+
+<p>In the ended, I opted for the R/RStudio/ggplot2 route, not least because I&#39;d already played with a wide range of simple analyses and visualisations in the environment on the f1datajunkie blog. blah also RCharts, an R library that makes it easy to create a wide range of interactive browser based visualisations built on top of a variety of Javascript based data visualisation libraries.</p>
+
+<p><em>(There&#39;s also a possibility that once finished, I may try to produce a version of this book that follows the python/ipython notebook/matplotlib route, maybe again with a few extensions that support the use of Javascript charting libraries.;-)</em>  </p>
+
+<h2>The RStudio Environment</h2>
+
+<h2>The Data Sources</h2>
+
+<h3>Ergast Motor Racing Database - Overview</h3>
+
+<p>The <a href="http://ergast.com/mrd/">ergast experimental Motor Racing Developer API</a> provides a historical record of Formula One results data dating back to 1950. The data is organised into a set of 11 database tables:</p>
+
+<ul>
+<li>Season List - a list of the seasons for which data is available</li>
+<li>Race Schedule - the races that took place in each given season</li>
+<li>Race Results</li>
+<li>Qualifying Results</li>
+<li>Standings</li>
+<li>Driver Information</li>
+<li>Constructor Information</li>
+<li>Circuit Information</li>
+<li>Finishing Status</li>
+<li>Lap Times ( from the 2011 season onwards)</li>
+<li>Pit Stops</li>
+</ul>
+
+<h3>Ergast Motor Racing Database - Detail</h3>
+
+<p>With each table, the Ergast API supports a wide range of filtering options that allow us to obtain different slices of data from the database. In this section, we will review the filtering options that are available and review some of the questions that these options allow us to explore. Note that the questions identified are likely to represent only a fraction of the possible questions we can potentially ask of the API. You are encouraged to explore the API yourself to identify further questions that may be of particular interest to you.</p>
+
+<h4>Season List - a list of the seasons for which data is available</h4>
+
+<h4>Race Schedule - the races that took place in each given season</h4>
+
+<h4>Race Results</h4>
+
+<h4>Qualifying Results</h4>
+
+<h4>Standings</h4>
+
+<h4>Driver Information</h4>
+
+<h4>Constructor Information</h4>
+
+<h4>Circuit Information</h4>
+
+<h4>Finishing Status</h4>
+
+<h4>Lap Times ( from the 2011 season onwards)</h4>
+
+<h4>Pit Stops</h4>
+
+<h2>Getting the Data into RStudio</h2>
+
+<h2>The Rest of This Book&hellip;</h2>
+
+</body>
+
+</html>
+

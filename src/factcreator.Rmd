@@ -1,0 +1,16 @@
+---
+output:
+  html_document:
+    keep_md: yes
+---
+```{r setup, echo = F, message=F}
+require(knitr)
+opts_chunk$set(fig.path = "images/factcreator-")
+```
+# Fact Generation
+
+In many areas of data driven reporting, textual summaries of events are created automatically from original data sets.
+
+http://www.nytimes.com/2015/03/08/opinion/sunday/if-an-algorithm-wrote-this-how-would-you-even-know.html
+
+

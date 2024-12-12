@@ -1,0 +1,13 @@
+---
+output:
+  html_document:
+    keep_md: yes
+---
+```{r setup, echo = F, message=F}
+require(knitr)
+opts_chunk$set(fig.path = "images/bibl-")
+```
+# Appendix - FIA Timing Sheet Scraper - Practice Lap Times
+
+This appendix describes a simple Python script for extracting practice session laptime data from FIA timing sheets.
+

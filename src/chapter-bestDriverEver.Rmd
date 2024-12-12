@@ -1,0 +1,12 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Best Driver ever
+
+https://f1metrics.wordpress.com/2016/10/06/experts-versus-models-how-do-we-rank-drivers/

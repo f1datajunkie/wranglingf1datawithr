@@ -1,0 +1,8 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+https://blog.twitter.com/2015/introducing-practical-and-robust-anomaly-detection-in-a-time-series
+
+http://things-about-r.tumblr.com/post/106806522699/change-point-detection-in-time-series-with-r-and

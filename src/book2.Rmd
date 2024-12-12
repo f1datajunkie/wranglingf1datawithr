@@ -1,0 +1,5 @@
+---
+title: "Book two"
+output: html_document
+---
+Where the data is available, we'll try to have a glimpse behind the scenes at some of the number crunching the teams get up to, from analysing telemetry to plotting race strategy. There are several blogs that are worth following in this respect, such as [intelligentF1](http://intelligentf1.wordpress.com/), where rocket scientist James Beck analyses laptime data each race weekend to try to model, and explain, the tyre selection, fuel saving and race strategies the teams adopt each weekend. 

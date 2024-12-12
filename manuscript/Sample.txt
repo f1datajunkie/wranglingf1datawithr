@@ -1,0 +1,25 @@
+foreword.txt
+chapter-intro.md
+
+-# Sample Introductory Material
+
+introRdataframes.md
+
+ergast-data.md
+
+-# Sample Race Weekend Chapters
+chapter-practiceUtilisation.md
+chapter-quali.md
+chapter-battlemaps.md
+
+# Sample Driver and Team Analyses
+chapter-churn.md
+chpater-lapsled.md
+
+endofseasonshowdown.md
+
+
+-# Sample Season/Career Reviews
+
+intraTeamDriverPerf.md
+pointsPerformanceCharts.md

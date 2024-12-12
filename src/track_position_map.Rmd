@@ -1,0 +1,98 @@
+---
+output:
+  html_document:
+    keep_md: yes
+---
+```{r setup, echo = F, message=F}
+library(knitr)
+opts_chunk$set(fig.path = "images/")
+knitr.table.format='markdown'
+```
+## How Busy was the Track When a Driver was Out? Track Position Maps 
+
+**STILL TO DO**
+The race battlemaps described in ???? use laptimes to calculate the time distance to cars ahead an behind on track. We can make use of the functions developed to generate those maps to get an idea of whether or not a driver may have been impeded during their practice laps.
+
+There are two significant points of difference between the race and practice/qualifying datasets:
+
+- practice and qualifying sessions don't have a sequential lap order corresponding to race lap; instead of a discrete race lap time axis, all we have is the continuous session time axis;
+- practice and qualifying sessions don't really have a notion of race lap number, race leader on a lap, or position order on each lap.
+
+Indeed, rather than depict a *battlemap* between a car and the car immediately ahead or behind in terms of race position, with only a secondary interest in intervening cars in terms of track position, our focus is solely on track position. That is, rather than representing the data as a *battlemap*, the inention is to create some sort of *track position map*.
+
+```{r}
+
+##TO DO
+track_position_data = function(df){
+  #Arrange the drivers in terms of increasing accumulated race time
+  df = arrange(df, acctime)
+  #For each car, calculate the DIFF time to the car immediately ahead on track
+  df$car_ahead=c(0,diff(df$acctime))
+  #Identify the code of the driver immediately ahead on track
+  df$code_ahead=c(NA,head(df$code,n=-1))
+  #Identify the race position of the driver immediately ahead on track
+  df$position_ahead=c(NA,head(df$position,n=-1))
+  
+  #Now arrange the drivers in terms of decreasing accumulated race time
+  df = arrange(df, -acctime)
+  #For each car, calculate the DIFF time to the car immediately behind on track
+  df$car_behind=c(0,diff(df$acctime))
+  #Identify the code of the driver immediately behind on track
+  df$code_behind=c(NA,head(df$code,n=-1))
+  #Identify the race position of the driver immediately behind on track
+  df$position_behind=c(NA,head(df$position,n=-1))
+}
+```
+
+
+from session utulisation
+
+#Session Utilisation On-or-Off-the-Pace Charts
+
+Another possible toggle view is 
+
+
+Time delta compared to the first time recorded in the stint
+
+```{r}
+#ll1=df['ll'][1,]
+#df=ddply(df,.(g),transform,fd=ll1-ll)
+#df['fd'][1,]=12
+f12015test=ddply(f12015test,.(name,stint),mutate,sf=stime[2],sfd=sf-stime)
+#sfd is junk in rows 1 and 2 of a stint
+f12015test['colourz']=ifelse(f12015test$colourx=='black',
+                             ifelse(f12015test$sfd>=0.0,'red','yellow'),
+                             f12015test$colourx)
+```
+
+
+from session utulisation
+```{r sessionUtilisation_toggle_stintgap}
+g = ggplot(f12015test)
+#Layer showing in-laps (laps on which a driver pitted) and out-laps
+g = g + geom_point(data=f12015test[f12015test['outlap'] | f12015test['pit'],],
+                   aes(x=cuml, y=name, color=factor(colourx)), pch=1)
+#Further annotation to explicitly identify pit laps (in-laps)
+g = g + geom_point(data=f12015test[f12015test['pit']==TRUE,],
+                   aes(x=cuml, y=name),pch='.')
+#Layer showing start of stint laptimes and green/purple lap highlights
+g = g + geom_text(data=f12015test[f12015test['lapInStint']==2 & !f12015test['pit'],],
+                  aes(x=cuml, y=name, 
+                      label=stime,#floor(stime*10)/10,
+                      color=factor(colourx)),
+                  size=2, angle=45)
+#Layer showing stint laptime deltas and green/purple lap highlights
+g = g + geom_text(data=f12015test[f12015test['lapInStint']>2 & !f12015test['pit'],],
+                  aes(x=cuml, y=name, 
+                      label=-round(sfd,2), 
+                      color=factor(colourz)),
+                  size=2, angle=45, fontface="italic")
+g = g + scale_colour_manual(values=c('darkgrey','darkgreen','purple','blue','red'))
+
+g + xlab(NULL) + ylab(NULL) + guides(colour=FALSE) + theme_bw()
+```
+
+italics
+online and offline charts... online can be generated in real time; offline requires all the data. cf. online and offline algorithms
+
+gap to ...? what - best time in session?

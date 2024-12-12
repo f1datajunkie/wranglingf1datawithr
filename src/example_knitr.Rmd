@@ -1,0 +1,14 @@
+---
+output:
+  html_document:
+    keep_md: yes
+---
+
+```{r}
+packageVersion("knitr")
+```
+
+```{r, fig.cap='My plot',echo=FALSE}
+plot(cars)
+```
+

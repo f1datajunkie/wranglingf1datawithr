@@ -1,0 +1,10 @@
+---
+output:
+  html_document:
+    keep_md: yes
+---
+```{r setup, echo = F, message=F}
+require(knitr)
+opts_chunk$set(fig.path = "images/part2-")
+```
+-# Part 2 - Practice

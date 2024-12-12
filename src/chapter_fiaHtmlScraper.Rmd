@@ -1,0 +1,205 @@
+---
+output:
+  html_document:
+    keep_md: yes
+---
+```{r setup, echo = F, message=F}
+library(knitr)
+opts_chunk$set(fig.path = "images/fiahtmlscraper-")
+```
+
+# Results Data from the FIA Website
+
+With a website redesign for 2015, the FIA now publish results classification webpages for each session of a Grand Prix weekend, along with more detailed information for qualifying and the race itself, including best sector times, sector speeds, and for the race, speed trap and pit information.
+
+Whenever you load a web page into browser, several things go on behind the scenes. To start with, a file is downloaded from the web address - the URL - of the page you want to view. This file is written in HTML, the *hypertext markup language*, which is the real language of the web. Once downloaded into your browser, the HTML source code is then parsed by your browser and rendered as a web page. A technique known as *webscraping* goes through a similar process of downloading the HTML source and then parsing it, but rather than rendering a view of the page the parsed HTML, the parsed HTML is treated as a data source from which data can be extracted or *scraped*.
+
+One of the HTML structures used to mark up elements in web page is a *table*. Several tools exist in R that make it easy to extract the tables that are contained in a web page and convert them into R dataframes. What this means is that we can pull appropriately formatted datatables directly from a website into an R dataframe.
+
+Grabbing a web page from a web address (that is, from an online URL), and parsing it can be done in a single line using the `rvest` package.
+
+```{r}
+#install.packages("rvest")
+library(rvest)
+#URL of the HTML webpage we want to scrape
+url="http://www.fia.com/events/formula-1-world-championship/season-2015/qualifying-classification"
+
+pageGrabber=function(url){
+  #Grab the page
+  html(url)
+}
+
+#USAGE:
+#mypage=pageGrabber(url)
+```
+
+We can writerough and ready function to grab a particular HTML table from an FIA web page and convert it into a dataframe:
+
+```{r}
+fiaTableGrabber=function(html_page,num){
+  #Parse HTML
+  cc=html_nodes(html_page, xpath = "//table")[[num]] %>% html_table(fill=TRUE)
+  #TO DO - extract table name
+  
+  #Set the column names
+  colnames(cc) = cc[1, ]
+  #Drop all NA column, omitting the first ("header" row)
+  cc=Filter(function(x)!all(is.na(x)), cc[-1,])
+  #Fill blanks with NA
+  cc=apply(cc, 2, function(x) gsub("^$|^ $", NA, x))
+  #would the dataframe cast handle the NA?
+  as.data.frame(cc)
+}
+```
+
+On occasion, we may get back an empty column - that is, a column where all the values are `NA`. The `Filter()` function removes such columns. The following function can clean the dataframe of such columns using the following function in a tidier way:
+
+```{r}
+dropNAcol=function(df){
+  #Drop all NA column
+  Filter(function(x)!all(is.na(x)), df)
+}
+```
+
+If we inspect the data published by the FIA, we see that laptimes, durations and times of day are published in the formats *HH:MM:SS.sss* and *MM:SS.sss* as appropriate, where *H* stands for an hour, *M* for a minute, *S* for a second and *s* for a millisecond.
+
+In many cases we shall find it convenient to work with times as a simple real value number, so let's write a little helper function that can take a time as a string and convert it to a numeric. In the function below, we split the time into a list of components by splitting the time string on a *:* character and reverse the list (so we have the seconds/milliseconds component, then the minutes, or the hours (or hour of day)). We can then calculate a suitably weighted sum, noting that the seconds term has a weight of 1 second, minutes a weighting of 60*1 seconds and hours a weighting of 60\*60\*1 seconds.
+
+```{r}
+library(stringr)
+
+#Parse out the time
+timeInS=function(t,basetime=0){
+  if (is.na(t) | t=='') return(NA)
+  if (!(grepl(t, ':'))) return(t)
+  if (suppressWarnings(!is.numeric(basetime)))
+    basetime=timeInS(basetime)
+  s=1
+  cnt=0
+  for(n in rev(str_split(t,':')[[1]])) {
+    n=as.numeric(n)
+    cnt=cnt + s*n
+    s=s*60
+  }
+  cnt - basetime
+}
+```
+
+Inspecting the HTML source code of the FIA pages for each Grand Prix that describe the session classifications, the qualifying session and the race, we note that each of those pages contains several data tables. We can create a set of functions, one for each page, that pulls out each table separately and processes it as necessary. (Note that with a little bit more work, we could detect each table from it's original table and potentially process it automatically. However, writing scrapers is often an exercise in pragmatism. Sometimes, it's worth writing a quick scraper and then applying a little bit of hand crafting or performing some steps manually, rather than writing complex code that can complete every step of the scraping operation automatically. The intention of scrapers is to simplify the collection of data through automation. But if it's likely to take more time to write  - and test - the code than you'll ever save, sometimes it's worth stopping with an 80% solution!)
+
+??xkcd cartoon?
+
+At the time of writing, the FIA pages take the following form:
+
+???
+
+
+
+
+```{r}
+#Session classifications
+#1, 2, 3
+fiaSessionClassPracticeTidy=function(xx){
+  xx['laptime']=apply(xx['TIME'],1,timeInS)
+  xx
+}
+
+# 4
+fiaSessionClassQualifyingTidy=function(xx){
+  fiaQualiClassTidy(xx)
+}
+
+# 5
+fiaSessionClassGridTidy=function(xx){
+  xx['laptime']=apply(xx['TIME'],1,timeInS)
+  xx
+}
+
+# 6
+fiaSessionClassRaceTidy=function(xx){
+  xx['laptime']=apply(xx['TIME'],1,timeInS)
+  xx
+}
+
+##Qualifying and Race Pages
+#1Q
+fiaQualiClassTidy=function(xx){
+  for (q in c('Q1','Q2','Q3')){
+    cn=paste(q,'time',sep='')
+    xx[cn]=apply(xx[q],1,timeInS)
+  }
+  
+  xx=dplyr:::rename(xx, Q1_laps=LAPS)
+  xx=dplyr:::rename(xx, Q2_laps=LAPS.1)
+  xx=dplyr:::rename(xx, Q3_laps=LAPS.2)
+  xx
+}
+
+#2Q, 3R 
+fiaSectorTidy=function(xx){
+  colnames(xx)=c('pos',
+                's1_driver','s1_nattime',
+                's2_driver','s2_nattime',
+                's3_driver','s3_nattime')
+  for (s in c('s1','s2','s3')) {
+    sn=paste(s,'_time',sep='')
+    sm=paste(s,'_nattime',sep='')
+    xx[sn]=as.numeric(apply(xx[sm],1,timeInS))
+  }
+  
+  xx[-1,]
+}
+
+#3Q, 4R
+fiaTrapTidy=function(xx){
+  xx
+}
+
+# 4Q, 5R
+fiaSpeedTidy=function(xx){
+  colnames(xx)=c('pos',
+                'inter1_driver','inter1_speed',
+                'inter2_driver','inter2_speed',
+                'inter3_driver','inter3_speed')
+  
+  xx[-1,]
+}
+
+# 2R
+fiaRaceFastlapTidy=function(xx){
+  xx['time']=apply(xx['LAP TIME'],1,timeInS)
+  xx
+}
+
+# 6R
+fiaPitsSummary=function(xx){
+  r=which(xx['NO']=='RACE - PIT STOP - DETAIL')
+  xx['tot_time']=apply(xx['TOTAL TIME'],1,timeInS)
+  Filter(function(x)!all(is.na(x)), xx[1:r-1,])
+}
+
+#6R
+fiaPitsDetail=function(xx){
+  colnames(xx)=xx[1,] #c('NO','DRIVER','LAP','TIME','STOP','NAT DURATION','TOTAL TIME')
+  xx['tot_time']=apply(xx['TOTAL TIME'],1,timeInS)
+  xx['time']=apply(xx['DURATION'],1,timeInS)
+  r=which(xx['NO']=='RACE - PIT STOP - DETAIL')
+  xx=xx[r+2:nrow(xx),]
+  #Remove blank row - http://stackoverflow.com/a/6437778/454773
+  xx[rowSums(is.na(xx)) != ncol(xx),]
+}
+
+```
+
+```{r}
+#URL of the HTML webpage we want to scrape
+url="http://www.fia.com/events/formula-1-world-championship/season-2015/qualifying-classification"
+
+xx=fiaTableGrabber(url,1)
+xx
+```
+
+```{r}
+fiaQualiClassTidy(xx)
+```
+

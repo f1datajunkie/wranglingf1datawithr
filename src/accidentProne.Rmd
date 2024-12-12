@@ -1,0 +1,14 @@
+---
+output:
+  html_document:
+    keep_md: yes
+---
+```{r setup, echo = F, message=F}
+require(knitr)
+opts_chunk$set(fig.path = "images/accidentprone-")
+```
+# Accident Prone?
+ 
+models based on eg poisson distribution - is a particular driver more accident prone than others? Is a team more likely to suffer a particular sort of failure than others? 
+ 
+ 
