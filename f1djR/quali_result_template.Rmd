@@ -1,0 +1,51 @@
+---
+title: "Quali Session Result template"
+output:
+  md_document:
+    variant: gfm
+    
+params:
+  session: 'quali'
+  stub: 'generic'
+  outdir: 'race'
+  rootdir: './reports'
+  year: 2018
+  qr: NA
+---
+
+```{r q_cp_setup, echo=FALSE}
+library(knitr)
+library(f1djR)
+
+knitr::opts_chunk$set(warning = FALSE, message=FALSE, echo=FALSE)
+
+rootdir = params$rootdir
+outdir = params$outdir
+stub = params$stub
+year = params$year
+qr = params$qr
+
+options(knitr.kable.NA = '')
+```
+
+```{r qr_opts, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE)
+opts_knit$set(base.dir = paste(rootdir, outdir, sep='/'))
+knitr::opts_chunk$set(fig.path = paste0("images/f1_" ,year, "_", stub, "-"))
+```
+
+
+### Qualifying Session Results
+
+The official session results were recorded as follows:
+```{r qr_session_result}
+qrtmp=qr
+for (i in c(1,2,3)) {
+  qrtmp[[paste0('Q',i)]]=ifelse(is.na(qrtmp[[paste0('Q',i)]]),'',
+                                paste0(qrtmp[[paste0('Q',i)]],' (',qrtmp[[paste0('q',i,'pos')]],')'))
+}
+
+qrtmp=rename(qrtmp, c("driverName"="DRIVER", "qspos"="POS"))
+qrtmp=qrtmp[order(qrtmp$POS),]
+kable(subset(qrtmp,select=c('POS','DRIVER','Q1',	'Q2',	'Q3')), format='markdown',row.names = FALSE)
+```

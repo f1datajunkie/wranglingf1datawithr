@@ -1,0 +1,51 @@
+---
+title: "Quali Session Utilisation template"
+output:
+  md_document:
+    variant: gfm
+    
+params:
+  session: 'quali'
+  stub: 'generic'
+  outdir: 'race'
+  rootdir: './reports'
+  year: 2018
+  qlapsb: NA
+  override: NA
+  gp: 'generic'
+---
+
+```{r q_cp_setup, echo=FALSE}
+library(knitr)
+library(f1djR)
+
+knitr::opts_chunk$set(warning = FALSE, message=FALSE, echo=FALSE)
+
+rootdir = params$rootdir
+outdir = params$outdir
+stub = params$stub
+year = params$year
+gp = params$gp
+qlaps = params$qlapsb
+override = params$override
+
+options(knitr.kable.NA = '')
+```
+
+```{r qr_opts, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE)
+opts_knit$set(base.dir = paste(rootdir, outdir, sep='/'))
+knitr::opts_chunk$set(fig.path = paste0("images/f1_" ,year, "_", stub, "-"))
+```
+
+
+## Qualifying Session Utilisation
+
+Activity throughout the three qualification sessions took place as follows:
+
+
+
+```{r quali_utilisation,fig.width=10}
+g=augmented_session_utilisation_chart(qlapsb,2,session=paste("F1",gp,year, "Qualifying"))+geom_vline(xintercept = override[2], linetype='dotted' ) + geom_vline(xintercept = override[3], linetype='dotted' )
+promoter_ergastf1dj(g)
+```

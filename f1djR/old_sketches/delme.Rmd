@@ -1,0 +1,25 @@
+---
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,warning=F)
+```
+
+# Plotting a chart
+
+We can create a chart from a dataset:
+
+```{r}
+library(ggplot2)
+library(ggthemes)
+
+g=ggplot(mtcars,aes(x=wt,y=mpg)) + geom_point()
+g
+```
+
+The chart exists as an object that can be themed using different styles:
+
+```{r}
+g + theme_economist()
+```

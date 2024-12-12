@@ -1,0 +1,56 @@
+---
+title: "f1_2017_aus_quali_ergast.Rmd"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+knitr::opts_chunk$set(echo = TRUE,warning=FALSE,message=FALSE)
+library(f1djR)
+```
+
+```{r}
+#qr=qualiResults.df(2013,1,con=dbConnect(RSQLite::SQLite(), './ergastdb13.sqlite'))
+qr=qualiResults.df(2017,2)
+
+qr=quali_progression_ergast_tx(qr)
+qrm=quali_progression_ergast_melt(qr)
+ 
+core_qualifying_rank_slopegraph(qr,qrm,spacer=0.21)+ggtitle('F1 2017 China Qualifying Progression Chart')
+```
+
+```{r}
+ qsr=subset(qr, subset=(q1time<q2time))
+ qsr['driverName']=factor(qsr[['driverName']])
+```
+ 
+Going from Q1 to Q2:
+ 
+```{r results='asis'}
+for (name in levels(qsr$driverName)) {
+  q1time=qsr[qsr['driverName']==name,][['q1time']]
+  q2time =qsr[qsr['driverName']==name,][['q2time']]
+  text='* `r name` failed to improve his time, recording `r q2time` compared to `r q1time` (`r q2time-q1time`s slower)'
+t=paste0(knit_child(text=text,quiet=TRUE),'\n')
+cat(text=t)
+}
+```
+
+```{r results='asis'}
+qsr=subset(qr, subset=(q2time<q3time))
+qsr['driverName']=factor(qsr[['driverName']])
+cat(paste0(knit_child(text="Going from Q2 to Q3:\n",quiet=TRUE),'\n'))
+for (name in levels(qsr$driverName)) {
+  text="* `r name` failed to improve his time, recording `r qsr[qsr['driverName']==name,][['q3time']]` compared to `r qsr[qsr['driverName']==name,][['q2time']]` (`r qsr[qsr['driverName']==name,][['q3time']]-qsr[qsr['driverName']==name,][['q2time']]`s slower)"
+cat(paste0(knit_child(text=text,quiet=TRUE),'\n')) }
+```
+
+Order change going from q2 to q3, along with laptime improvement (-ve is a better time in q3)
+```{r}
+ txt='select qr1.driverName, (qr1.q3time-qr1.q2time) imp1,  qr2.driverName,(qr2.q3time-qr2.q2time) imp2  from qr as qr1 join qr as qr2 where qr1.driverName!=qr2.driverName and qr1.q2pos>qr2.q2pos and qr1.q3pos<qr2.q3pos'
+library(sqldf)
+ sqldf(txt)
+```
+
+
+
