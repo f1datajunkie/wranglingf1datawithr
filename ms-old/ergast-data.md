@@ -1,5 +1,3 @@
-
-
 # Chapter - Getting the data from the Ergast Motro Racing Database
 
 We can access the contents on the ergast motor racing atabase in three distinct ways:
@@ -8,7 +6,7 @@ We can access the contents on the ergast motor racing atabase in three distinct 
 * online, via the ergast API, for seasonal data up to and including the current season and results up to and including the last race;
 * via a downloaded image of the database for results to the end of the last completed season.
 
-There are also several thrid party applications that have been built on top of the ergast data. For further details, see the [ergast Application Gallery](http://ergast.com/mrd/gallery).
+There are also several third party applications that have been built on top of the ergast data. For further details, see the [ergast Application Gallery](http://ergast.com/mrd/gallery).
 
 Whilst it can be instructive to review the applications that other people have built, we are more interested in accessing the actual data, whether by the API or the database. Whilst it doesn't really matter where we get the data from for the point of view of analysis, the API and the database offer slighlty different *affordances* when it comes to actually getting data out in a particular form. For example, the API requires a network connection for live data requests or to populate a cache (a local stored copy of data returned from an API request), whereas the database can be run offline but requires a database management system to serve the data in response to database requests. The API provides data results that combines data from several separate database tables right from the start, whereas with the database we need to work out ourselves how to combine data from several separate data tables.
 
