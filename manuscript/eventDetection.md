@@ -116,7 +116,7 @@ plot(graph.data.frame(llx))
 
 ![Network diagram showing position changes across two laps.](images/eventDetection-twoLapGraph-1.png) 
 
-Notice how the nodes - representing positions - are connected to each other by arrows, showing how a car placed in one position moved to another position. So for example, we see that the cars in positions 9 and 10 changed palce with each other, as did those in positions 1 and 2. The car in 19th went to 18th, the one in 18th to 17th, and the one in 17th fell back to 19th. And so so.
+Notice how the nodes - representing positions - are connected to each other by arrows, showing how a car placed in one position moved to another position. So for example, we see that the cars in positions 9 and 10 changed place with each other, as did those in positions 1 and 2. The car in 19th went to 18th, the one in 18th to 17th, and the one in 17th fell back to 19th. And so so.
 
 Visually, it's clear to use that the connected nodes form different groups, or clusters. The question we are now faced with is how to identify these distinct components of connected nodes *automatically*? Fortunately, there are well known methods for calculating such things, and the `igraph` package makes it easy for us to call on them:
 
@@ -208,7 +208,7 @@ plot(graph.data.frame(llx3))
 
 So for example, at some point in the window, we see that the cars in positions 9 and 10 swapped places; we also see how the cars in 1st and 2nd swapped places, and then the car in 2nd fell back to 4th; at some point a car in 4th place car moved to 3rd and the 3rd placed car to 2nd; at possibly other points the car in 4th fell back, a car in 6th moved up to 5th and a car in 5th moved up to 4th. Just *when* these changes took place, or even the order in which they took place, we can't necessarily tell from the diagram.
 
-Unlike the simple 2 lap case then, where we can read off the actial position changes, when we try to use this technique to visualise positions changes across 3 or more laps, we quickly lose track of what actually happened well. What we do know, though, is which positions were being contested and changed hands in the course of those laps.
+Unlike the simple 2 lap case then, where we can read off the actual position changes, when we try to use this technique to visualise positions changes across 3 or more laps, we quickly lose track of what actually happened well. What we do know, though, is which positions were being contested and changed hands in the course of those laps.
 
 
 ```r
